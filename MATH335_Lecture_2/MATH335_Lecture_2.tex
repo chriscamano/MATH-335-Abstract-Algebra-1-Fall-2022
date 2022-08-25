@@ -1,7 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[pdftex]{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{amsmath,amssymb,amsthm}
 \pagestyle{empty}
 \author{Chris Camano: ccamano@sfsu.edu}
 \title{MATH 335  Lecture 2 }
@@ -15,11 +14,7 @@
 \vfuzz2pt
 \hfuzz2pt
 
-
-\newcommand{\econst}{\mathrm{e}}
-\newcommand{\diff}{\mathrm{d}}
-\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
-%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+%%%%Short cuts and formatting%%%%%%%%%%
 \newcommand{\q}{\quad}
 \newcommand{\tab}{\\\\}
 \renewcommand{\labelenumi}{\alph{enumi})}
@@ -30,7 +25,7 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\rtwo}{\mathbb{R}^2}
-\newcommand{\mxn}{{mxn}}
+\newcommand{\mxn}{{m\times n}}
 
 %%%%%%Sets and common phrases%%%%%%%%%
 \newcommand{\Axb}{\textbf{Ax=b} }
@@ -44,17 +39,24 @@
 \newcommand{\xlim}{\lim_{x\rightarrow \infty}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
-\newcommand{\ep}{\epsilon}
+\newcommand{\ep}{\varepsilon}
 \newcommand{\i}{\text{ if }}
 \newcommand{\and}{\text{ and }}
-
-
+%%%%%% Theorem formatting%%%%%%%%%%%
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\numberwithin{equation}{section}
 \everymath={\displaystyle}
 
 
 \begin{document}
 \maketitle
 
-\sect{Concluding last Lecture}
-test
+
 \end{document}
