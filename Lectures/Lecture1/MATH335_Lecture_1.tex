@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 335  Lecture 1 }
+\date
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%Analysis%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\arr}{\rightarrow}
+\newcommand{\xlim}{\lim_{x\rightarrow \infty}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ep}{\epsilon}
+\newcommand{\i}{\text{ if }}
+\newcommand{\and}{\text{ and }}
+
+
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+\sect{Number systems}
+\textbf{The Integers }\\
+\[
+  \Z=\{...,-1,0,1,...\}
+\]
+\textbf{The Natural Numbers}\\
+\[
+  \mathbb{N}=\{1,2,3,...\}
+\]
+\\
+\\
+\textbf{Definition}: Well ordered\\
+A non empty subset S of integers is wellordered if and only if S contains a smallest or least element. \\\\
+\textbf{Well ordering of $\N$} Every non empty subset of $\N$ is well ordered. This is to say it has a smallest element since it will always contain positive integer values. \\\
+\sect{Divisibility}\\
+Let $A \neq 0, b\in \Z$ a divides b if and only if b can be expressed in the following way:
+\[
+  b=ak,k \in \Z
+\]
+a is a divisor of b and is often denoted in the following way, read as a divides b:
+\[
+   a|b
+\]\\
+\textbf{Properties of divisibility}\\
+Division is transitive, therefore:
+\[
+  \text{if } a|b \land a|c \arr a| b \pm c
+\]
+if $a|n$ and $a|(n+m)$ then $a|m$. \\
+\sect{Prime Numbers}\\
+\textbf{Definition}:\\
+A positive integer p $>1$ is said to be a prime number if and only if the one only positive integer divisiors are 1 and p. \\\\
+\textbf{Fundemental Theorem of Arithmetic}\\
+Every positive integer $n>1$ is equal to:
+\[
+  n=P_1^{\alpha_1}P_2^{\alpha_2}\cdots P_{k-1}^{\alpha_{k-1}}P_k^{\alpha_k}=\prod_{i=1}^kP_i^{\alpha_i}
+\]
+Where $P_1,..,P_k$ are distinct primes and $\alpha_1,..,\alpha_k$ are positive integers. These two sets of primes and positive integers are unique to the prime factorization of a given number.\\\\
+\textbf{Proposition}:\\
+Let p be a prime number and a and b$\in \Z$ if $p|ab$ then $p|a$ or $p|b$\\\\
+\textbf{Greatest Common Denominator}:\\
+Let d be a positive integer, d is the greatest common divisor(gcd) of a,b$\in \Z$ if and only if two criteria are satisfied:
+\[
+  (1)\quad d|a \text{ and } d|b
+\]
+\[
+  (2)\text{ if } e|a \text{ and } e|b \text{ then } e|d
+\]
+Statement one states that the given positive integer must in fact divide both a and b. \\
+Statement two says that if there exists another comon divisor then it must also divide d. This is a statement asserting that no greater common divisor exists.
+\end{document}
