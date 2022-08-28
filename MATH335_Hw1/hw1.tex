@@ -1,0 +1,187 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+\usepackage{hyperref}
+\hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=blue,
+     citecolor = black,
+     urlcolor=blue,
+     }
+%\usepackage[sc]{mathpazo}
+%\linespread{1.05}         % Palatino needs more leading (space between lines)
+%\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\lcm}{\mathrm{lcm}}
+
+
+
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+
+
+\begin{document}
+
+%\homework{}{Homework I}
+
+\begin{enumerate}
+
+\item Let's start with a warm-up exercise for doing proofs where you need to use induction:  Prove that for all $n \in \N$
+  $$ 1 + 2 + 2^2 + 2^3 + \cdots + 2^n \, = \, 2^{n+1} - 1.$$
+  \textbf{Re-expressing the problem statement: }\\
+  Prove that $\forall n \in \N$
+  \[
+    1+\sum_{i=1}^n2^i=2^{n+1}-1
+  \]
+  \begin{proof}\\
+    Base case: n=2\\
+    $$1+2^1+2^2=2^3-1$$
+    $$7=7$$
+    Inductive Hypothesis: \\
+    $$P(k)=  1+\sum_{i=1}^k2^i=2^{k+1}-1$$
+    \begin{align*}
+      &P(k+1):\\\\
+      &1+\sum_{i=1}^{k+1}2^i=2^{k+2}-1\\\\
+      &1+\sum_{i=1}^{k}2^i+2^{k+1}=2^{k+2}-1\\\\
+      &2^{k+1}-1+2^{k+1}=2^{k+2}-1\\\\
+        &2(2^{k+1})-1=2^{k+2}-1\\\\
+          &2^{k+2}-1=2^{k+2}-1\\\\
+    \end{align*}
+  \end{proof}
+\item And here is a second warm-up exercise: if $x$ is a nonnegative real number show that $(1 + x)^n - 1 \geq nx$ for $n=0, 1, 2, \ldots$.\\
+\textbf{Re-expressing the problem statment:}\\
+let $x\in \R, x\geq 0$, Show that
+\[
+  (1 + x)^n - 1 \geq nx, \forall n \in \mathbb{W}
+\]
+\begin{proof}
+  Suppose  $x\in \R, x\geq 0$
+\begin{align*}
+  &(1 + x)^n - 1 \geq nx\\
+  &(1 + x)^n\geq nx+1\\
+  &\sum_{k=0}^n\binom{n}{k}x^k\geq nx+1\\
+  &nx+1+\sum_{k=2}^n\binom{n}{k}x^k\geq nx+1\\
+  &\therefore (1 + x)^n\geq nx+1\\
+  &\text{ Which implies }\\
+  &(1 + x)^n-1\geq nx
+\end{align*}
+\end{proof}
+\item Show that if $p$ is a prime number, there do not exist nonzero integers $a$ and $b$ such that $a^2 = pb^2$ (i.e. $\sqrt{p}$ is not a rational number).\\
+\begin{Proof} If p is a prime number then the only divisors of p are 1 and p\\
+Let a and be expressed in the prime factorization:
+\[
+  a=\prod_{i=1}^kP_i^{\alpha_i}
+\]
+\[
+  b=\prod_{i=1}^kP_i^{\beta_i}
+\]
+the original statement is then:
+\[
+  \left[\prod_{i=1}^kp_i^{\alpha_i}\right]^2=p\left[\prod_{i=1}^kp_i^{\beta_i}\right]^2
+\]
+\[
+  \prod_{i=1}^kp_i^{2\alpha_i}=p\prod_{i=1}^kp_i^{2\beta_i}\
+\]
+If $a^2=b^2$ then they would have identical prime factorizations. Since the integer is raised to the second power this implies that for all prime factors, each has an even exponent. \\
+if p is not a prime factor of b then it would have an odd exponent. If p was a prime factor of b then it would form an odd exponent when combined with the corresponding prime factor since the each prime factor in $b^2$ has an even exponent.  In either case p exists as a prime number with an odd exponent therefore it cannot be equal to a since a has a prime factorization that has eveen exponenets for each prime factor.
+\end{Proof}
+\item Compute the $\gcd$ of the following pairs of integers:
+  \begin{itemize}
+  \item[i)] $14$ and $39$;
+  \begin{align*}
+    &39=14(2)+11\\
+    &14=11(1)+3\\
+    &11=3(3)+2\\
+    &3=2(1)+1\\
+    &2=1(2)+0\\
+  \end{align*}
+    gcd(39,14)=1
+  \item[ii)] $234$ and $165$;
+  \begin{align*}
+  &234=165(1)+69\\
+  &165=69(2)+27\\
+  &69=27(2)+15\\
+  &27=15(1)+12\\
+  &15=12(1)+3\\
+  &12=3(4)+0\\
+\end{align*}
+  gcd(234,165)=3
+  \item[iii)] $471$ and $562$.
+  \begin{align*}
+  &562=471(1)+91\\
+  &471=91(5)+16\\
+  &91=16(5)+11\\
+  &16=11(1)+5\\
+  &11=5(2)+1\\
+  &5=1(5)+0\\
+\end{align*}
+gcd(562,471)=1
+  \end{itemize}
+\item Let $a, b, c \in \Z$. Prove that if $\gcd(a,b) =1$ and $a \, | \, bc$ then $a | c$.
+\begin{proof}
+if $a|bc$ then $bc=ak,k \in \Z$
+\end{proof}
+
+\item Let $a$ and $b$ be positive integers where
+  $$ a = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k}  \quad \quad \mbox{and}  \quad \quad a = p_1^{\beta_1} p_2^{\beta_2} \cdots p_k^{\beta_k}  $$
+  with $p_1, \ldots, p_k$ distinct primes and $\alpha_i, \beta_i \geq 0$ for $i=1, \ldots, k$. Show that
+  $$ \lcm(a,b) \, = \, p_1^{\max(\alpha_1, \beta_1)} p_2^{\max(\alpha_2, \beta_2)} \cdots p_k^{\max(\alpha_k,\beta_k)}. $$
+
+
+\begin{proof}
+  Let a and b be expressed in a product form as follows:
+  \[
+    a=\prod_{i=1}^kp_i^{\alpha_i}
+  \]
+  \[
+    b=\prod_{i=1}^kp_i^{\beta_i}
+  \]
+  Let:
+  \[
+    l=\prod_{i=0}^kp_i^{\max(\alpha_i,\beta_i)}
+  \]
+  be the least common multiple of a and b.
+
+  \begin{enumerate}
+    \item a
+  \end{enumerate}
+\end{proof}
+ \end{enumerate}
+
+
+
+\end{document}
