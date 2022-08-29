@@ -172,13 +172,27 @@ if $a|bc$ then $bc=ak,k \in \Z$
   \]
   Let:
   \[
-    l=\prod_{i=0}^kp_i^{\max(\alpha_i,\beta_i)}
+    l=\prod_{i=1}^kp_i^{\max(\alpha_i,\beta_i)}
   \]
-  be the least common multiple of a and b.
-
+  for l to be the least common multiple of a and b it must satisfy two conditions.
   \begin{enumerate}
-    \item a
+    \item $a|l$ and $b|l$ (common multiple)
+    \item if there exists a multiple e such that $a|e$ and $b|e$ then $l|e$ (least common multiple)
   \end{enumerate}
+a) We must prove that $l=ak,k\in \Z$ which can be done in the following way:
+\begin{align*}
+  l&=ak\\\\
+  \prod_{i=1}^kp_i^{\max(\alpha_i,\beta_i)}&=\left[\prod_{i=1}^kp_i^{\alpha_i}\right]k\\\\
+  \prod_{i=1}^kp_i^{\max(\alpha_i,\beta_i)}&=\left[\prod_{i=1}^kp_i^{\alpha_i}\right]\left[\prod_{i=1}^kp_i^{\max(\alpha_i,\beta_i)-\alpha_i}\right]\\\\
+\end{align*}
+By similar reasoning it can be shown that $b|l$.\\\\
+b) We now prove that if there exists another common multiple that l must be smaller.\\
+Suppose there exists another common multiple e, this is to say, $a|e$, and $b|e$ to prove that l is the least common multiple we must show that e=$lm,m\in \Z$.\\\\
+We will first express e in its prime factorization:
+\[
+  e=\prod_{i=1}^kp_i^{\delta_i}
+\]
+
 \end{proof}
  \end{enumerate}
 
