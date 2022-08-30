@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 370  Lecture 3 }
+\date
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+\vfuzz2pt
+\hfuzz2pt
+
+%%%%Short cuts and formatting%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{m\times n}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%Analysis%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\arr}{\rightarrow}
+\newcommand{\xlim}{\lim_{x\rightarrow \infty}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\i}{\text{ if }}
+\newcommand{\and}{\text{ and }}
+%%%%%% Theorem formatting%%%%%%%%%%%
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\numberwithin{equation}{section}
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+
+\sect{Opening notes}\\
+The following is a recap of a short lecture on how to compute the greatest common denominator and least common multiple of two very large integers. \\\\
+\thm Division Algorithm:
+Let $a,b\in \Z, b>0$ then:
+\[
+  \exists !\quad q,r \in \Z : a=qb+r\quad 0\leq r < b
+\]
+\begin{proof}
+  Let S be the following nonempty set:
+  \[
+    S=\{a-bk: k \in \Z \land a-bk \geq0\}
+  \]
+  First show that s is nonempty: If $a\geq 0$ then for k=0$ a-bk=a$ which means a is in the set. \\\\
+  If $a<0$ then let k=2a therefore $a-b(2a)=a(1-2b)$ so for all b since a is negative we get a product of two negative numbers which is postiive. \\\\
+  If $0 \in S $ then $\exists q \in \Z$ such that $a-bq=0$. This means that $a=bq+0$ or $a=bq$ \\\\
+If $0 \notin S$ since S is a nonempty set of positive integers by the well ordering principle there exists a smallest element of that set since the set S is then a subset of the natural number . let this smallest element be r. $r\in S, r\in \Z^+, r=\min(S)$\\\\
+So there exists an integer q such that $r=a-bq$ this implies that $a=bq+r$ \\\\
+We now need to show that r is smaller than b: Suppose that r is not smaller then b, this would imply that $r\geqb$ which means that $a=bq+r$ but since r is greater than b we can right the expression as $b(q+1)+(r-b)$ but since r is greater than b $ r-b$ is non negative. $r-b \geq 0$ Hence r-b should be in s however r-b is smaller r but r is supposed to be the smallest element in S by the well ordering principle. 
+\end{proof}
+\end{document}

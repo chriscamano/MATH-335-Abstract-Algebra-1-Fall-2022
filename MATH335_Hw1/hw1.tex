@@ -153,7 +153,15 @@ gcd(562,471)=1
   \end{itemize}
 \item Let $a, b, c \in \Z$. Prove that if $\gcd(a,b) =1$ and $a \, | \, bc$ then $a | c$.
 \begin{proof}
-if $a|bc$ then $bc=ak,k \in \Z$
+if $a|bc$ then $bc=ak,k \in \Z$\\\\
+Suppose that a does not divide c. This implies that $c=ak$
+
+\[
+  gcd(a,b)=ar+bs=1
+\]
+multiply by c
+plug in ad=bc
+implies that gcd is greater than one.
 \end{proof}
 
 \item Let $a$ and $b$ be positive integers where
@@ -188,11 +196,22 @@ a) We must prove that $l=ak,k\in \Z$ which can be done in the following way:
 By similar reasoning it can be shown that $b|l$.\\\\
 b) We now prove that if there exists another common multiple that l must be smaller.\\
 Suppose there exists another common multiple e, this is to say, $a|e$, and $b|e$ to prove that l is the least common multiple we must show that e=$lm,m\in \Z$.\\\\
+\[
+  e=am,m\in \Z
+\]
+\[
+  e=an,n\in \Z
+\]
 We will first express e in its prime factorization:
 \[
   e=\prod_{i=1}^kp_i^{\delta_i}
 \]
-
+$\delta_i>max(\alpha_i,\beta_i)$
+Due to the fact that e is composed of prime factors of a and also prime factors of b then the if :
+\[
+  l=\prod_{i=1}^kp_i^{max\{\alpha_i,\beta_i\}}
+\]
+then for each prime since$\delta_i>max(\alpha_i,\beta_i)$ this implies that l is smaller since $l|e$ since each exponent of the prime factors is smaller than that of the exponent in the prime factorizaion of e.
 \end{proof}
  \end{enumerate}
 
