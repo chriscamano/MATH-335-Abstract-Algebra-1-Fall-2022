@@ -65,18 +65,18 @@
   \textbf{Re-expressing the problem statement: }\\
   Prove that $\forall n \in \N$
   \[
-    1+\sum_{i=1}^n2^i=2^{n+1}-1
+    \sum_{i=0}^n2^i=2^{n+1}-1
   \]
   \begin{proof}\\
     Base case: n=2\\
     $$1+2^1+2^2=2^3-1$$
     $$7=7$$
     Inductive Hypothesis: \\
-    $$P(k)=  1+\sum_{i=1}^k2^i=2^{k+1}-1$$
+    $$P(k)=  \sum_{i=0}^k2^i=2^{k+1}-1$$
     \begin{align*}
       &P(k+1):\\\\
-      &1+\sum_{i=1}^{k+1}2^i=2^{k+2}-1\\\\
-      &1+\sum_{i=1}^{k}2^i+2^{k+1}=2^{k+2}-1\\\\
+      &\sum_{i=0}^{k+1}2^i=2^{k+2}-1\\\\
+      &\sum_{i=0}^{k}2^i+2^{k+1}=2^{k+2}-1\\\\
       &2^{k+1}-1+2^{k+1}=2^{k+2}-1\\\\
         &2(2^{k+1})-1=2^{k+2}-1\\\\
           &2^{k+2}-1=2^{k+2}-1\\\\
@@ -117,7 +117,7 @@ the original statement is then:
   \prod_{i=1}^kp_i^{2\alpha_i}=p\prod_{i=1}^kp_i^{2\beta_i}\
 \]
 If $a^2=b^2$ then they would have identical prime factorizations. Since the integer is raised to the second power this implies that for all prime factors, each has an even exponent. \\
-if p is not a prime factor of b then it would have an odd exponent. If p was a prime factor of b then it would form an odd exponent when combined with the corresponding prime factor since the each prime factor in $b^2$ has an even exponent.  In either case p exists as a prime number with an odd exponent therefore it cannot be equal to a since a has a prime factorization that has eveen exponenets for each prime factor.
+if p is not a prime factor of b then it would have an odd exponent. If p was a prime factor of b then it would form an odd exponent when combined with the corresponding prime factor since the each prime factor in $b^2$ has an even exponent.  In either case p exists as a prime number with an odd exponent therefore it cannot be equal to a since a has a prime factorization that has even exponenets for each prime factor.
 \end{Proof}
 \item Compute the $\gcd$ of the following pairs of integers:
   \begin{itemize}
@@ -151,17 +151,60 @@ if p is not a prime factor of b then it would have an odd exponent. If p was a p
 \end{align*}
 gcd(562,471)=1
   \end{itemize}
-\item Let $a, b, c \in \Z$. Prove that if $\gcd(a,b) =1$ and $a \, | \, bc$ then $a | c$.
-\begin{proof}
-if $a|bc$ then $bc=ak,k \in \Z$\\\\
-Suppose that a does not divide c. This implies that $c=ak$
-
-\[
-  gcd(a,b)=ar+bs=1
+\item Let $a, b, c \in \Z$. Prove that if $\gcd(a,b) =1$ and $a \, | \, bc$ then $a | c$.\\
+\begin{lemma}
+  Lemma:
+If $d=gcd(a,b)$ then there exist x,y such that: \[
+  d=ax+by
 \]
-multiply by c
-plug in ad=bc
-implies that gcd is greater than one.
+\begin{proof}
+  Consider the following set:
+\[
+  S=\{ax+by\in \Z_{>0}, a,b\in \Z\}
+\]
+Since $S\subset \N$ due to the exclusion of integer values greater than zero then by the well ordering principle there exist a least value, here denoted as$S_{\min}$\\\\
+Let d be $S_{\min}$. we now prove that d is the gcd of a and b by satisfying the definition of gcd.
+\begin{proof}
+  Suppose that d does not divide a. Then by the division algorithm a can be expressed as the following :
+  \[
+    a=qd+r\quad 0<r<d\quad q\geq 0
+  \]
+\begin{align*}
+  &a=q(ax+by)+r\\
+  &r=a-q(ax+by)\\
+  &r=a-qax-qby\\
+  &r=a(1-qx)-qby\\
+  &r=a(1-qx)+b(-qy)
+\end{align*}
+so r$\in S$ since $r>0$ by construction, however $r<d$ which contradicts that $S_{\min}$ is d so $d|a$ and by a symmetric proof $d|b$
+\end{proof}
+We must show that for all other common divisiors of a and b that d is the greatest:
+\begin{proof}
+  let e be a common divisor of a and b, therefore $a=ek,k\in \Z$ and $b=el,l\in \Z$ Then:
+  \begin{align*}
+    &d=ax+by\\
+    &d=ekx+ely\\
+    &d=e(kx+ly)\\
+  \end{align*}
+  so it is clear that if there is a common divisor e then $e|d$
+\end{proof}
+\end{lemma}
+The proof above then implies that since there exist x,y such that :
+\[
+  gcd(a,b)=ax+by
+\]
+that
+\[
+  ax+by=1
+\]
+\begin{align*}
+  &  ax+by=1\\
+  &cax+cby=c\\
+  &a|bc\mapsto bc=ak,k\in\Z\\
+  &cax+aky=c\\
+  &a(cx+ky)=c\\
+\end{align*}
+so we have proven that $a|c$
 \end{proof}
 
 \item Let $a$ and $b$ be positive integers where
@@ -193,25 +236,29 @@ a) We must prove that $l=ak,k\in \Z$ which can be done in the following way:
   \prod_{i=1}^kp_i^{\max(\alpha_i,\beta_i)}&=\left[\prod_{i=1}^kp_i^{\alpha_i}\right]k\\\\
   \prod_{i=1}^kp_i^{\max(\alpha_i,\beta_i)}&=\left[\prod_{i=1}^kp_i^{\alpha_i}\right]\left[\prod_{i=1}^kp_i^{\max(\alpha_i,\beta_i)-\alpha_i}\right]\\\\
 \end{align*}
+where $P_1,...,P_k$ are distinct primes and:
+ $$\max\{\alpha_i,\beta_i\}\geq \alpha_i \quad \forall \alpha_i$$
 By similar reasoning it can be shown that $b|l$.\\\\
 b) We now prove that if there exists another common multiple that l must be smaller.\\
-Suppose there exists another common multiple e, this is to say, $a|e$, and $b|e$ to prove that l is the least common multiple we must show that e=$lm,m\in \Z$.\\\\
+Suppose there exists another common multiple e, this is to say, $a|e$, and $b|e$ to prove that l is the least common multiple we must show that $l|e$.\\\\
+e is a common multiple so:
 \[
-  e=am,m\in \Z
+  a|e\mapsto e=am,m\in \Z
 \]
 \[
-  e=an,n\in \Z
+  b|e\mapsto e=an,n\in \Z
 \]
 We will first express e in its prime factorization:
 \[
   e=\prod_{i=1}^kp_i^{\delta_i}
 \]
-$\delta_i>max(\alpha_i,\beta_i)$
+where $P_1,...,P_k$ are distinct primes and:
+$\delta_i\geq max(\alpha_i,\beta_i)$
 Due to the fact that e is composed of prime factors of a and also prime factors of b then the if :
 \[
   l=\prod_{i=1}^kp_i^{max\{\alpha_i,\beta_i\}}
 \]
-then for each prime since$\delta_i>max(\alpha_i,\beta_i)$ this implies that l is smaller since $l|e$ since each exponent of the prime factors is smaller than that of the exponent in the prime factorizaion of e.
+then for each prime since$\delta_i\geq max(\alpha_i,\beta_i)$ this implies that l is smaller since $l|e$ since each exponent of the prime factors is smaller than that of the exponent in the prime factorizaion of e for $l\neq e$.
 \end{proof}
  \end{enumerate}
 
