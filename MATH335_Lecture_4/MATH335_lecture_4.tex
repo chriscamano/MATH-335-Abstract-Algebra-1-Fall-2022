@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 335  Lecture 4 }
+\date
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+\vfuzz2pt
+\hfuzz2pt
+
+%%%%Short cuts and formatting%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{m\times n}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%Analysis%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\arr}{\rightarrow}
+\newcommand{\xlim}{\lim_{x\rightarrow \infty}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\i}{\text{ if }}
+\newcommand{\and}{\text{ and }}
+%%%%%% Theorem formatting%%%%%%%%%%%
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\numberwithin{equation}{section}
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+\sect{Continuation of division algorithm proof: Proof of uniqueness}
+Gernela philosophy of proving uniequeness. Suppose there exist two of something that is supposed to be unique then prove that they have to be equal to eachother by some proof techinque. Applying that here we will take a direct proof alongside the division algorithm.
+
+\\\\
+Suppose there also exist integers$q^*,r^*,$ with $r^*<b$ and $a=bq^*+r^*$\\\\
+we can rearrnage into the following eequivilancy:
+
+\begin{align*}
+  &bq+r=bq^*+r^*\\
+  &b(q-q^*)=r^*-r\\
+\end{align*}
+Since $0\leq r<b$ and $0\leq r^*<b$ the difference must also be smaller then b.
+\begin{align*}
+  b|(q-q^*)|=|r^*-r|
+\end{align*}
+The only way this equation holds is if $|(q-q^*)|=|r^*-r|=0$ meaning that the difference of the two quotients and remainders is zero so they are the same. \\\\
+\thm Let a,b $\in \Z, a,b\neq 0$ Then $\exists t,u\in \Z$such that:
+\[
+  gcd(a,b)=at+bu
+\]
+\begin{proof}
+  Let :
+  \[
+    S=\{am+bn: m,n\in \Z , am+bn>0\}
+  \]
+  $S\subset \N$ therefore by well ordering there is a least element denoted $S_{\min}=d$\\\\
+  So there exist integers t,u such that:
+  \[
+    d=at+bu
+  \]
+  We now show that d is the gcd of a and b:
+  By division algorithm:
+  \[
+    a=dq+r,0\leq r <d\quad q,r \in \Z
+  \]
+  \begin{align*}
+    &r=a-dq\\
+    &r=a-(at+bu)q\\
+    &r=a(1-qt)+b(-uq)
+  \end{align*}
+  So $r\in \S$ but by definition $ r<d$ and d is the smallest element of S so r cannot exist meaning that $d|a$\\\\
+  Suppose that there is some other integer e such that $e|a$ and $e|b$ then:
+  \[
+    e|at+bu
+  \]
+  so $e|d$
+\end{proof}
+\defn if the gcd of two intergers is equal to one they are called relatively prime. 
+\end{document}
