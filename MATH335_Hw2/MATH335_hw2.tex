@@ -101,14 +101,11 @@ Let the gcd of a and b be denoted as the letter g:
 \[
   \gcd(a,b)=g
 \]
+By the definition of g for any linear combination of the form: \[
+  ax+by, x,y\in \Z
+\]
+$g|ax+by$ therefore $g|at+bu$ which is equivilant to stating that $g|1$. The only factors of 1 are -1,1 therefore since g is the greatest common factor this implies that g must be equal to 1.
 
-\begin{align*}
-  &g|g\\
-  &g|at+bu\\
-  g|1
-\end{align*}
-
-then by the definition of gcd $g|a$ and $g|b$.
 \end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Let $a$ and $b$ be integers with $b >0$. Using division algorithm, write $a = bq + r$ where $q, r \in \Z$ and $0 \leq r < b$. Show that $\gcd(a,b) = \gcd(b, r)$.
@@ -138,7 +135,7 @@ by the definition of gcd this implies that e divides any linear combination of b
 \[
   qb+r(1)
 \]
-then $c|qb+r\mapsto c|a$. so c is a common divisor of a and b. d is the greatest common divsor of a and b by the original definition. This means that if c were larger than d that we would arive at a contradiction, therefore c must be less than or equal to d which proves that for some common divisor e of b and r that $e|d$
+then $e|qb+r\mapsto c|a$. so c is a common divisor of a and b. d is the greatest common divsor of a and b by the original definition. This means that if e were larger than d that we would arive at a contradiction, therefore e must be less than or equal to d which proves that for some common divisor e of b and r that $e|d$
 
 This means that d=gcd(b,r) and d=gcd(a,b) by definition so we arrive to the final conclusion that:
 \[
@@ -155,7 +152,7 @@ To approach this proof let us first recall the two following properties of the E
   \phi(n)=\prod_{i=1}^k\phi(p_i^{\alpha_i})=\prod_{i=0}^kp_i^{\alpha_i-1}(p_i-1)
 \]
 \end{enumerate}
-To prove that for all n >2 that $\phi(n)$ is even we must consider the operation we are preforming when given an arbitrary integer n. We apply the phi function to each of the prime factors of n. In this operation there are two possible occurences. The first is that the chosen prime factor is odd and the other is that it is even. \\
+To prove that for all $n >2$ that $\phi(n)$ is even we must consider the operation we are preforming when given an arbitrary integer n. We apply the phi function to each of the prime factors of n. In this operation there are two possible occurences. The first is that the chosen prime factor is odd and the other is that it is even. \\
 Consider the case where $p_i=2k+1, k\in \Z$ by definition 2 we have the following:
 \begin{align*}
   &\phi(p_i^{\alpha_i})=p_i^{\alpha_i-1}(p_i-1)\\
