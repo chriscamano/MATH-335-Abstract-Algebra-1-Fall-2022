@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  8 SEP 2022 09:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  8 SEP 2022 12:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**MATH335_hw2.tex
-(./MATH335_hw2.tex
+**MATH335_Lecture_6.tex
+(./MATH335_Lecture_6.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-07-12>
 (c:/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -142,7 +142,7 @@ LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
 Runaway argument?
-./MATH335_hw2.tex:6: Paragraph ended before \date  was complete.
+./MATH335_Lecture_6.tex:6: Paragraph ended before \date  was complete.
 <to be read again> 
                    \par 
 l.6 
@@ -219,8 +219,8 @@ File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count275
 \l__pdf_internal_box=\box54
 )
-(./MATH335_hw2.aux)
-\openout1 = `MATH335_hw2.aux'.
+(./MATH335_Lecture_6.aux)
+\openout1 = `MATH335_Lecture_6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
@@ -295,45 +295,229 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
+./MATH335_Lecture_6.tex:53: Undefined control sequence.
+l.53 \prop
+           Let m and n be two positive integers that are relativley prime, t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--91
 
  []
 
 [1
 
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 109--113
 
  []
 
-[3] [4] (./MATH335_hw2.aux) ) 
+./MATH335_Lecture_6.tex:114: Undefined control sequence.
+l.114   (a,b)\in A\cross
+                         B\quad 1\leq a \leq m, gcd(a,m)=1\quad 1\leq b\leq ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--132
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 137--142
+
+ []
+
+./MATH335_Lecture_6.tex:151: Undefined control sequence.
+l.151 \defn
+            Equivilance realtions and equivilance classes\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_Lecture_6.tex:164: Missing $ inserted.
+<inserted text> 
+                $
+l.164   \item x\sim
+                    x
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./MATH335_Lecture_6.tex:165: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.165   \item
+              x\simy $\iff$ y\simx
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./MATH335_Lecture_6.tex:165: LaTeX Error: Something's wrong--perhaps a missing 
+\item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.165   \item x
+               \simy $\iff$ y\simx
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./MATH335_Lecture_6.tex:165: LaTeX Error: Something's wrong--perhaps a missing 
+\item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.165   \item x
+               \simy $\iff$ y\simx
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./MATH335_Lecture_6.tex:165: Undefined control sequence.
+l.165   \item x\simy
+                     $\iff$ y\simx
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_Lecture_6.tex:165: Missing $ inserted.
+<inserted text> 
+                $
+l.165   \item x\simy $\iff
+                          $ y\simx
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./MATH335_Lecture_6.tex:165: Undefined control sequence.
+l.165   \item x\simy $\iff$ y\simx
+                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_Lecture_6.tex:166: Undefined control sequence.
+l.166   \item x\simy
+                     and y\simz then x\simz
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_Lecture_6.tex:166: Undefined control sequence.
+l.166   \item x\simy and y\simz
+                                then x\simz
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_Lecture_6.tex:166: Undefined control sequence.
+l.166   \item x\simy and y\simz then x\simz
+                                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[3] (./MATH335_Lecture_6.aux) ) 
 Here is how much of TeX's memory you used:
- 2884 strings out of 478542
- 38559 string characters out of 5854402
- 338641 words of memory out of 5000000
- 20771 multiletter control sequences out of 15000+600000
- 438095 words of font info for 110 fonts, out of 8000000 for 9000
+ 2877 strings out of 478542
+ 38571 string characters out of 5854402
+ 338652 words of memory out of 5000000
+ 20769 multiletter control sequences out of 15000+600000
+ 435546 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,66p,372b,280s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8
-r.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:
-/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf
--dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dis
-t/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/s
-ymbol/usyr.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:
-/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MATH335_hw2.pdf (4 pages, 73548 bytes).
+ 57i,8n,66p,370b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/base
+/8r.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive
+/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/
+fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/sym
+bol/usyr.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/t
+exlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2021/texmf-
+dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on MATH335_Lecture_6.pdf (3 pages, 90767 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 65 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

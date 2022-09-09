@@ -104,7 +104,9 @@ Let the gcd of a and b be denoted as the letter g:
 By the definition of g for any linear combination of the form: \[
   ax+by, x,y\in \Z
 \]
-$g|ax+by$ therefore $g|at+bu$ which is equivilant to stating that $g|1$. The only factors of 1 are -1,1 therefore since g is the greatest common factor this implies that g must be equal to 1.
+$g|ax+by$ therefore $g|at+bu$ when x=t and y=u, which is equivilant to stating that $g|1$ since at+bu=1. The only factors of 1 are -1,1 therefore since g is the greatest common factor this implies that g must be equal to 1.
+
+Thus we have shown that if there exist integers t and u such that at+bu=1 then this implies that the gcd of a and b must be equal to one, and in turn that a and b are classified as being relativley prime.
 
 \end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -148,7 +150,7 @@ This means that d=gcd(b,r) and d=gcd(a,b) by definition so we arrive to the fina
 To approach this proof let us first recall the two following properties of the Euler Totient function:
 \begin{enumerate}
   \item if p is a prime number then $\phi(p^k)=p^k-p^{k-1}$
-  \item for all n$\Z$\[
+  \item for all n$\in \Z$\[
   \phi(n)=\prod_{i=1}^k\phi(p_i^{\alpha_i})=\prod_{i=0}^kp_i^{\alpha_i-1}(p_i-1)
 \]
 \end{enumerate}
@@ -159,7 +161,7 @@ Consider the case where $p_i=2k+1, k\in \Z$ by definition 2 we have the followin
   &p_i^{\alpha_i-1}(p_i-1)=(2k+1)^{\alpha_i}(2k+1-1)\\
   &(2k+1)^{\alpha_i}2k\\
 \end{align*}
-So it has been shown that for an odd prime factor $p_i$ that $2|p_i$.\\
+So it has been shown that for an odd prime factor $p_i$ that $2|\phi(p_i)$.\\\\
 Now consider the case when the chosen prime factor is even and there do not exist odd prime factors. This only occurs when the single prime factor is 2. Using property one we can show: \begin{align*}
   \phi(2^k)=2^k-2^{k-1}=2(2^{k-1}-2^{k-2})
 \end{align*}
@@ -184,7 +186,7 @@ for all integer inputs phi returns another integer thus $\phi(k)\in \Z$ let $\ph
 \begin{align}
   &\phi(d)k^*=\phi(n)
 \end{align}
-so it is clear then that $\phi(n)$ is equal to $\phi(d)$ times some integer. Since $\phi(n)$ can be expressed as $\phi(d)$ times another integer this implies \[
+so it is clear then that $\phi(n)$ is equal to $\phi(d)$ times some integer. Since $\phi(n)$ can be expressed as a multiple of $\phi(d)$  this implies \[
   \phi(d)|\phi(n)
 \]
 \end{proof}
