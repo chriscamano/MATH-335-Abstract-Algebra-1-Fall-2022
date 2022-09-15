@@ -50,5 +50,48 @@
 \begin{document}
 
 \maketitle
+\defn equivilance relation\\
+An equivilance relation$\sim$ on a set X is a relation where three properties are held:
+\begin{enumerate}
+  \item $x \sim x \quad \forall x\in X$ Reflexive
+  \item $s\sim y \iff y\sim x \quad \forall x \in X$ Symmetric
+  \item $x\sim y \land y\sim z $ implies $x\sim z $ Transitivity.
+\end{enumerate}
+equivilance realations are used to collect elements in a set for some intended purpose. It partitions the set by creating classifiers for the elements of the set. \\\\
+Fundemental example:\\
+
+We first start by fixing some m$\in \Z^+$ (this works for any positive integer). We define a realtion on all integers $\Z$ such that: \\
+Given two integers a,b $a\sim b \iff n |a-b$ in other words: $a \equiv b \mod n $.
+
+\begin{enumerate}
+  \item $x \sim x \quad \forall x\in X$ Reflexive
+  \begin{proof}
+    $a\equiv b mod n$ since $n|a-a$
+  \end{proof}
+  \item $s\sim y \iff y\sim x \quad \forall x \in X$ Symmetric
+  \begin{proof}
+    $n|(x-y)$ so $n|-(x-y)$ so $n|y-x$
+  \end{proof}
+  \item $x\sim y \land y\sim z $ implies $x\sim z $
+   Transitivity.
+   \begin{proof}
+     $n|a-b$ and $n|b-c$ so $n|a-b+b=n|a-c$ so $a\sim c$
+   \end{proof}
+\end{enumerate}
+\defn Equivilance classes\\
+Let X be a set, and $\sim$ be an equivilance realtion on X. Let $x\in X$ Then:
+\[
+  [x]=\{y\in X: y\sim x\}
+\]
+This set is called the equivilance class of x.The equivilance class of x always contains x.
+\\
+The union of all equivilance classed mod n paritions the interges. :
+\[
+  \cup_{i=1}^\infty[x_i]=\Z
+\]
+Also \[
+  x_i\cap x_j=\empty , i\neq j
+\]
+
 
 \end{document}

@@ -1,0 +1,268 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+ \author{Chris Camano: ccamano@sfsu.edu}
+ \title{MATH 335  Homework 3 }
+ \date
+
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\lcm}{\mathrm{lcm}}
+
+
+
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+
+
+\begin{document}
+
+\maketitle
+\begin{enumerate}
+
+\item Let $A = \{a, b, c\}$ and $B = \{1,2,3,4\}$.
+  \begin{itemize}
+    \item[a)] Determine $A \times B$.\\\\
+    $A\cross B=\{ (a,1),(a,2),(a,3),(a,4),(b,1),(b,2),(b,3),(b,4),(c,1),
+    (b,2),(b,3),(b,4)\}$
+    \item[b)] Draw $B \times \R$.\\\\\\\\\\\\\\
+
+     \item[c)] Prove that if $C$ and $D$ are finite sets then $|C \times D| = |C| \cdot |D|$.
+     \begin{proof}\\\\
+       By the definition of the cartesian product for any fixed $c_o \in C$ there exist$ |D|$ corresponding ordered pairs of the form $(c_0,d), d\in D$ .\\\\ Since there are $|C|$ possible choies for $c_0$ and $|D|$ corresponding ordered pairs of the form $(c_0,d)$ then this implies $\exists\quad  |C|\cdot |D|$ unique ordered pairs, thus $|C\times D=|C||D|$ as the cartesian product is the set of all unique ordered pairs between two sets.
+   \end{proof}
+   \end{itemize}
+ \item Determine which one of the following are equivalence relations. Justify.
+   \begin{itemize}
+    \item[a)] $x \sim y$ in $\R$ if $x \geq y$.
+    \begin{enumerate}
+      \item \textbf{Reflexivity}
+      \begin{proof}
+        Prove: $x\sim x$\\
+        if $x\sim x$ then:
+        \[
+          x\geq x \rightarrow x=x
+        \]
+        So we have shown the relation satisfies Reflexivity.
+      \end{proof}
+      \item \textbf{Symmetry}
+      \begin{proof}
+        Prove $x \sim y \rightarrow y \sim x $\\
+        if $x \sim y$ then $x \geq y$ from this inequality alone we cannot show that $y>x$ however it could be the case that $x=y$ in which case the statement $y \geq x$ would hold true staisfying symmetry. However, we cannot conclude if it is the case that $y=x$ given $x\geq y$ and thus we cannot prove the symmetritricity of the relation.
+
+      \end{proof}\\
+      \item \textbf{Transitivity}
+      \begin{proof}
+          Prove if $x\sim y$ and $y\sim z$ then $x \sim z $\\
+          if $x \sim y$ then $x\geq y$, if $y \sim z$ then $ y\geq z $ then:
+          \[
+            x \geq y \geq z
+          \]
+          \[
+            x\geq z
+          \]
+          Therefore $x\sim z$
+      \end{proof}
+      This relation is not an equivilance relation .
+    \end{enumerate}
+    \item[b)] $m \sim n$ in $\Z$ if $mn > 0$.
+    \begin{enumerate}
+      \item \textbf{Reflexivity}
+      \begin{proof}
+        Prove: $m\sim m$
+        if $m\sim m $ then this implies \[
+          m^2>0
+        \]
+        Consider the case of m =0, then this relation implies:
+        \[
+          0>0
+        \]
+        Which is not true, thus since Reflexivity fails for this relation this implies that the relation is not an equivilance relation.
+      \end{proof}
+      \item \textbf{Symmetry}
+      \begin{proof}
+        Prove $x \sim y \rightarrow y \sim x $\\
+        If $x\sim y$ then :
+        \[
+          xy>0
+        \]
+        by commutatitivty of  integer multiplication this also gives:
+    \[
+      yx>0
+    \]
+    and thus we have that $y\sim x$ so y is related to x
+      \end{proof}
+      This relation is not an equivilance relation .
+    \end{enumerate}
+    \item[c)] $x \sim y$ in $\R$ if $|x-y| \leq 4$.
+    \begin{enumerate}
+      \item \textbf{Reflexivity}
+      \begin{proof}
+        Prove: $x\sim x$\\
+        if $x \sim x $ then this implies :
+        \begin{align*}
+        &|x-x|\leq 4\\
+        &|0|\leq 4\\
+        &0\leq 4
+        \end{align*}
+      \end{proof}
+      \item \textbf{Symmetry}
+      \begin{proof}
+        Prove $x \sim y \rightarrow y \sim x $\\
+        if $x\sim y $ then :
+        \[
+          |x-y|\leq 4
+        \]
+        if $y\sim x$ then :
+        \[
+          |y-x|\leq 4
+        \]
+        For all x, y in the real numbers $|x-y|$ =$|y-x|$ therefore by this reason y is symmetric to x.
+      \end{proof}
+      \item \textbf{Transitivity}
+      \begin{proof}
+          Prove if $x\sim y$ and $y\sim z$ then $x \sim z $\\
+          Consider the following hypothetical:
+          given x,y,z $\in \R$ with x=4 y= 8, z= 12\\
+          Then if $x \sim y$ this implies:
+          \begin{align*}
+            &|4-8|\leq 4 \\
+            &4\leq 4
+          \end{align*}
+          \begin{align*}
+            &|8-12|\leq ``4`` \\
+            &4\leq 4
+          \end{align*}
+          \begin{align*}
+            &|4-12|\leq 4 \\
+            &8\leq 4
+          \end{align*}
+          so we have shown that the relation does not satisfy Transitivity.
+      \end{proof}
+    \end{enumerate}
+    This relation is not an equivilance relation .
+    \end{itemize}
+\item Define the relation $(x_1, y_1) \sim (x_2,y_2)$ in $\R^2$ if $x_1^2 + y_1^2 = x_2^2 + y_2^2$. Show that this is an equivalence relation. Then describe the equivalence classes.
+\begin{enumerate}
+  \item \textbf{Reflexivity}
+  \begin{proof}
+    Prove: $x\sim x$\\
+    if $x\sim x$ then we have that:
+    \[
+      x_1^2+y_1^2=x_1^2+y_1^2
+    \]
+    Which is true.
+  \end{proof}
+  \item \textbf{Symmetry}
+  \begin{proof}
+    Prove $x \sim y \rightarrow y \sim x $
+    if $x\sim y$ then we have that:
+    \[
+      x_1^2+y_1^2=x_2^2+y_2^2
+    \]
+    which by the symmetric property of equality proves that $y\sim x $
+  \end{proof}
+  \item \textbf{Transitivity}
+  \begin{proof}
+      Prove if $x\sim y$ and $y\sim z$ then $x \sim z $\\
+      if $x\sim y$ then \[
+        x_1^2+y_1^2=x_2^2+y_2^2
+      \]
+      if $y\sim z $ then we have:
+      \[
+        x_2^2+y_2^2=x_3^2+y_3^2
+      \]
+      performing a substitution gives:
+    \[
+      x_1^2+y_1^2=x_3^2+y_3^2
+    \]
+    and thus $x\sim z$
+  \end{proof}
+\end{enumerate}
+This allows us to conclude that this relation is an equivilance realtion. The equivilance classes of this relation take the following structure:
+\[
+  [a=(x_1,y_1)]=\{b\in \R: a\sim b\}=\{(x_2,y_2)\in \R^2:(x_1,y_1)\sim (x_2,y_2)\}
+\]
+so for some fixed ordered pair in $\R^2$ the equivilance class is the set of all other ordered pairs satisfying the relation. These relations consitute circles formed by the points related centered at $(x_1,y_1)$or rather $(x_i,y_i)$ for some arbitrary location in $\R^2$\\\\
+In other words each equivilance class is a circle in $\R$ centered at the point you are drawing a relation with with radius: $x_2+y_2$
+\item Define a relation on $\R^2 \setminus \{(0,0)\}$ by letting $(x_1, y_1) \sim (x_2, y_2)$ if there exists a nonzero $\lambda$ such that $(x_1,y_1) = (\lambda x_2, \lambda y_2)$.
+Prove that $\sim$ defines an equivalence relation on $\R^2 \setminus \{(0,0)\}$. What are the equivalence classes ?
+
+\begin{enumerate}
+  \item \textbf{Reflexivity}
+  \begin{proof}
+    Prove: $x\sim x$\\
+    If $x\sim x$ then we have the following relation:
+    \[
+      (x_1,y_1)=\lambda(x_2,y_2)
+    \]
+    which is true for the case of $\lambda$=1 proving Reflexivity.
+  \end{proof}
+  \item \textbf{Symmetry}
+  \begin{proof}
+    Prove $x \sim y \rightarrow y \sim x $\\
+    If $x\sim y $ then:
+    \[
+      (x_1,y_1)=\lambda_1(x_2,y_2)
+    \]
+    Solving for $(x_2,y_2)$ we obtain:
+    \[
+      \frac{1}{\lambda_1}(x_1,y_1)=(x_2,y_2)
+    \]
+    So we have shown that for $\lambda_2=\frac{1}{\lambda_1}$ that $y\sim x $ and thus have proven symmetritricity.
+  \end{proof}
+  \item \textbf{Transitivity}
+  \begin{proof}
+      Prove if $x\sim y$ and $y\sim z$ then $x \sim z $\\
+      If $x\sim y$ then :
+      \[
+        (x_1,y_1)=\lambda_1(x_2,y_2_)
+      \]
+      If $y\sim z$ then:
+      \[
+        (x_2,y_2)=\lambda_2(x_3,y_3)
+      \]
+      substituting for $(x_2,y_2)$:
+      \[
+        (x_1,y_1)=\lambda_1\lambda_2(x_3,y_3)
+      \]
+      so we have that $(x_1,y_1)\sim (x_3,y_3)$ for $\lambda_3=\lambda_1\lambda_2$ Proving Transitivity.
+  \end{proof}
+\end{enumerate}
+ \end{enumerate}
+The equivilance classes are the set of all scalar multiples of the vector formed by the original selection of $(x_1,y_1)$. This is to say that each equivilance class is a line in $\R$ where the elements on the line represent the span of the original vector chosen.
+
+
+\end{document}
