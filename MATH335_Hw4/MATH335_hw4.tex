@@ -63,31 +63,87 @@
 \begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Deterimine which one of the following sets is a group under addition:
-Addition is a binary operator by the proof provided in class, therefore we will validate the properties of each group accepting that addition is binary operator in these contexts.
+Addition is a binary operator by the proof provided in class, therefore we will validate the properties of each group accepting that addition is binary operator in these contexts.\\\\
+only 1 a is a group associativity fails.
+\\\\
+
   \begin{itemize}
     \item[a)] the set of rational numbers in lowest terms whose denominators are odd
     \begin{proof}
+      \\
+      Let G be the following set:
+      \[
+        G=\left\{\frac{m}{n},n=2k+1,n\neq0,k,m\in \Z\right\}
+      \]
       \begin{enumerate}
-        \\
         \item Proof of associativity over operator
-        \item Proof of existence of identity element
-        \item  Proof of existence of inverse of operator
+        let a,b,c$\in$G where:
+        \[
+          a=\frac{a_m}{a_n}\quad b=\frac{b_m}{b_n}\quad
+          c=\frac{c_m}{c_n}
+        \]
+        \begin{align*}
+          &\left(\frac{a_m}{a_n}+\frac{b_m}{b_n}\right)+\frac{c_m}{c_n}=\frac{a_m}{a_n}+\left(\frac{b_m}{b_n}+\frac{c_m}{c_n}\right)\\\\
+          &\frac{a_mb_n+b_ma_n}{a_nb_n}+\frac{c_m}{c_n}=\frac{a_m}{a_n}+\left(\frac{b_mc_n+c_mb_n}{b_nc_n}\right)\\\\
+          &\frac{c_n(a_mb_n+b_ma_n)+c_ma_nb_n}{a_nb_nc_n}=\frac{a_n(b_mc_n+c_mb_n)+a_mb_nc_n}{a_nb_nc_n}\right)\\\\
+          &\frac{c_na_mb_n+c_nb_ma_n+c_ma_nb_n}{a_nb_nc_n}=\frac{c_na_mb_n+c_nb_ma_n+c_ma_nb_n}{a_nb_nc_n}\right)
+        \end{align*}
+        The denominator $a_nb_nc_n$ is the product of three odd numbers which is also odd preserving the construction of G.
+        \item Proof of existence of identity element\\
+        The Identity element for this set is the element: $\frac{0}{1}=0$
+        \item  Proof of existence of inverse of operator\\
+        For all g$\in G$ the additive inverse is the element $-g$
       \end{enumerate}
     \end{proof}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item[b)] the set of rational numbers in lowest terms whose denominators are even
     \begin{proof}\\
+      \\
+      Let G be the following set:
+      \[
+        G=\left\{\frac{m}{n},n=2k,n\neq0,k,m\in \Z\right\}
+      \]
       \begin{enumerate}
         \item Proof of associativity over operator
-        \item Proof of existence of identity element
-        \item  Proof of existence of inverse of operator
+        let a,b,c$\in$G where:
+        \[
+          a=\frac{a_m}{a_n}\quad b=\frac{b_m}{b_n}\quad
+          c=\frac{c_m}{c_n}
+        \]
+        \begin{align*}
+          &\left(\frac{a_m}{a_n}+\frac{b_m}{b_n}\right)+\frac{c_m}{c_n}=\frac{a_m}{a_n}+\left(\frac{b_m}{b_n}+\frac{c_m}{c_n}\right)\\\\
+          &\frac{a_mb_n+b_ma_n}{a_nb_n}+\frac{c_m}{c_n}=\frac{a_m}{a_n}+\left(\frac{b_mc_n+c_mb_n}{b_nc_n}\right)\\\\
+          &\frac{c_n(a_mb_n+b_ma_n)+c_ma_nb_n}{a_nb_nc_n}=\frac{a_n(b_mc_n+c_mb_n)+a_mb_nc_n}{a_nb_nc_n}\right)\\\\
+          &\frac{c_na_mb_n+c_nb_ma_n+c_ma_nb_n}{a_nb_nc_n}=\frac{c_na_mb_n+c_nb_ma_n+c_ma_nb_n}{a_nb_nc_n}\right)
+        \end{align*}
+        The denominator $a_nb_nc_n$ is the product of three even numbers which is also even preserving the construction of G.
+        \item Proof of existence of identity element\\
+        The Identity element for this set is the element: $\frac{0}{2}=0$
+        \item  Proof of existence of inverse of operator\\  For all g$\in G$ the additive inverse is the element $-g$
       \end{enumerate}
     \end{proof}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item[c)] the set of rational numbers of absolute value $<1$
+    \\
+    Let G be the following set:
+    \[
+      G=\left\{\frac{m}{n},n\neq0,n,m\in \Z, |\frac{m}{n}|<1\right\}
+    \]
     \begin{proof}\\
       \begin{enumerate}
         \item Proof of associativity over operator
+        let a,b,c$\in$G where:
+        \[
+          a=\frac{a_m}{a_n}\quad b=\frac{b_m}{b_n}\quad
+          c=\frac{c_m}{c_n}
+        \]
+        \begin{align*}
+          &\left(\frac{a_m}{a_n}+\frac{b_m}{b_n}\right)+\frac{c_m}{c_n}=\frac{a_m}{a_n}+\left(\frac{b_m}{b_n}+\frac{c_m}{c_n}\right)\\\\
+          &\frac{a_mb_n+b_ma_n}{a_nb_n}+\frac{c_m}{c_n}=\frac{a_m}{a_n}+\left(\frac{b_mc_n+c_mb_n}{b_nc_n}\right)\\\\
+          &\frac{c_n(a_mb_n+b_ma_n)+c_ma_nb_n}{a_nb_nc_n}=\frac{a_n(b_mc_n+c_mb_n)+a_mb_nc_n}{a_nb_nc_n}\right)\\\\
+          &\frac{c_na_mb_n+c_nb_ma_n+c_ma_nb_n}{a_nb_nc_n}=\frac{c_na_mb_n+c_nb_ma_n+c_ma_nb_n}{a_nb_nc_n}\right)
+        \end{align*}
+
         \item Proof of existence of identity element
         \item  Proof of existence of inverse of operator
       \end{enumerate}
@@ -95,6 +151,11 @@ Addition is a binary operator by the proof provided in class, therefore we will 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
      \item[d)] the set of rational numbers of
      absolute value $\geq 1$ together with $0$.
+     \\
+     Let G be the following set:
+     \[
+       G=\left\{\frac{m}{n},n\neq0,k,m\in \Z, |\frac{m}{n}|>1\right\}\cup \{0\}
+     \]
      \begin{proof}
        \begin{enumerate}
          \item Proof of associativity over operator
@@ -132,7 +193,17 @@ Addition is a binary operator by the proof provided in class, therefore we will 
   \item[a)] Prove that $G$ is a group under addition.
   \begin{proof}
     \begin{enumerate}
-      \item Proof of associativity over operator
+      \item Proof of associativity over operator\\
+      Let
+      \[
+        a=a_1+b_1\sqrt{2}\quad b=a_2+b_2\sqrt{2})\quad c= a_3+b_3\sqrt{2}
+      \]
+
+      \begin{align*}
+        &(a+b)+c=a+(b+c)\\
+        &(a_1+b_1\sqrt{2}+a_2+b_2\sqrt{2})+a_3+b_3\sqrt{2}=a_1+(b_1\sqrt{2}+a_2+b_2\sqrt{2}+a_3+b_3\sqrt{2})\\
+        &a_1+b_1\sqrt{2}+a_2+b_2\sqrt{2}+a_3+b_3\sqrt{2}=a_1+b_1\sqrt{2}+a_2+b_2\sqrt{2}+a_3+b_3\sqrt{2}
+      \end{align*}
       \item Proof of existence of identity element
       \item  Proof of existence of inverse of operator
     \end{enumerate}
