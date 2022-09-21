@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  19 SEP 2022 23:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  21 SEP 2022 09:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -466,29 +466,43 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
 
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 
-./MATH335_hw4.tex:71: LaTeX Error: There's no line here to end.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
+
+ []
+
+
+./MATH335_hw4.tex:74: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.71       L
+l.74       L
             et G be the following set:
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
-./MATH335_hw4.tex:87: Missing } inserted.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
+./MATH335_hw4.tex:90: Missing } inserted.
 <inserted text> 
                 }
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -496,26 +510,26 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:87: Extra \right.
+./MATH335_hw4.tex:90: Extra \right.
 <argument> ..._mb_n)+a_mb_nc_n}{a_nb_nc_n}\right )
                                                   \\\\ &\frac {c_na_mb_n+c_n...
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I'm ignoring a \right that had no matching \left.
 
-./MATH335_hw4.tex:87: Missing { inserted.
+./MATH335_hw4.tex:90: Missing { inserted.
 <inserted text> 
                 {
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./MATH335_hw4.tex:87: Missing } inserted.
+./MATH335_hw4.tex:90: Missing } inserted.
 <inserted text> 
                 }
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -523,26 +537,26 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:87: Extra \right.
+./MATH335_hw4.tex:90: Extra \right.
 <argument> ...b_ma_n+c_ma_nb_n}{a_nb_nc_n}\right )
                                                    
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I'm ignoring a \right that had no matching \left.
 
-./MATH335_hw4.tex:87: Missing { inserted.
+./MATH335_hw4.tex:90: Missing { inserted.
 <inserted text> 
                 {
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./MATH335_hw4.tex:87: Missing } inserted.
+./MATH335_hw4.tex:90: Missing } inserted.
 <inserted text> 
                 }
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -550,17 +564,17 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:87: Extra \right.
+./MATH335_hw4.tex:90: Extra \right.
 <argument> ..._mb_n)+a_mb_nc_n}{a_nb_nc_n}\right )
                                                   \\\\ &\frac {c_na_mb_n+c_n...
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I'm ignoring a \right that had no matching \left.
 
-./MATH335_hw4.tex:87: Missing \endgroup inserted.
+./MATH335_hw4.tex:90: Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -568,27 +582,27 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:87: Misplaced \omit.
+./MATH335_hw4.tex:90: Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-./MATH335_hw4.tex:87: Missing { inserted.
+./MATH335_hw4.tex:90: Missing { inserted.
 <inserted text> 
                 {
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./MATH335_hw4.tex:87: Missing } inserted.
+./MATH335_hw4.tex:90: Missing } inserted.
 <inserted text> 
                 }
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -596,17 +610,17 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:87: Extra \right.
+./MATH335_hw4.tex:90: Extra \right.
 <argument> ...b_ma_n+c_ma_nb_n}{a_nb_nc_n}\right )
                                                    
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I'm ignoring a \right that had no matching \left.
 
-./MATH335_hw4.tex:87: Missing \endgroup inserted.
+./MATH335_hw4.tex:90: Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -614,380 +628,64 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:87: Misplaced \omit.
+./MATH335_hw4.tex:90: Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-./MATH335_hw4.tex:87: Missing { inserted.
+./MATH335_hw4.tex:90: Missing { inserted.
 <inserted text> 
                 {
-l.87         \end{align*}
+l.90         \end{align*}
                          
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
-
-
-./MATH335_hw4.tex:98: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.98       \\
-             
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH335_hw4.tex:99: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.99       L
-            et G be the following set:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-./MATH335_hw4.tex:115: Missing } inserted.
-<inserted text> 
-                }
-l.115         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:115: Extra \right.
-<argument> ..._mb_n)+a_mb_nc_n}{a_nb_nc_n}\right )
-                                                  \\\\ &\frac {c_na_mb_n+c_n...
-l.115         \end{align*}
-                          
-I'm ignoring a \right that had no matching \left.
-
-./MATH335_hw4.tex:115: Missing { inserted.
-<inserted text> 
-                {
-l.115         \end{align*}
-                          
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./MATH335_hw4.tex:115: Missing } inserted.
-<inserted text> 
-                }
-l.115         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATH335_hw4.tex:115: Extra \right.
-<argument> ...b_ma_n+c_ma_nb_n}{a_nb_nc_n}\right )
-                                                   
-l.115         \end{align*}
-                          
-I'm ignoring a \right that had no matching \left.
-
-./MATH335_hw4.tex:115: Missing { inserted.
-<inserted text> 
-                {
-l.115         \end{align*}
-                          
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./MATH335_hw4.tex:115: Missing } inserted.
-<inserted text> 
-                }
-l.115         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATH335_hw4.tex:115: Extra \right.
-<argument> ..._mb_n)+a_mb_nc_n}{a_nb_nc_n}\right )
-                                                  \\\\ &\frac {c_na_mb_n+c_n...
-l.115         \end{align*}
-                          
-I'm ignoring a \right that had no matching \left.
-
-./MATH335_hw4.tex:115: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.115         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATH335_hw4.tex:115: Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.115         \end{align*}
-                          
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./MATH335_hw4.tex:115: Missing { inserted.
-<inserted text> 
-                {
-l.115         \end{align*}
-                          
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./MATH335_hw4.tex:115: Missing } inserted.
-<inserted text> 
-                }
-l.115         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATH335_hw4.tex:115: Extra \right.
-<argument> ...b_ma_n+c_ma_nb_n}{a_nb_nc_n}\right )
-                                                   
-l.115         \end{align*}
-                          
-I'm ignoring a \right that had no matching \left.
-
-./MATH335_hw4.tex:115: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.115         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATH335_hw4.tex:115: Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.115         \end{align*}
-                          
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./MATH335_hw4.tex:115: Missing { inserted.
-<inserted text> 
-                {
-l.115         \end{align*}
-                          
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-
-./MATH335_hw4.tex:130: LaTeX Error: There's no line here to end.
+./MATH335_hw4.tex:118: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.130       \begin
-                  {enumerate}
+l.118       T
+             he binary operator of addition fails for this set when dealing ...
+
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-./MATH335_hw4.tex:142: Missing } inserted.
-<inserted text> 
-                }
-l.142         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATH335_hw4.tex:142: Extra \right.
-<argument> ..._mb_n)+a_mb_nc_n}{a_nb_nc_n}\right )
-                                                  \\\\ &\frac {c_na_mb_n+c_n...
-l.142         \end{align*}
-                          
-I'm ignoring a \right that had no matching \left.
-
-./MATH335_hw4.tex:142: Missing { inserted.
-<inserted text> 
-                {
-l.142         \end{align*}
-                          
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./MATH335_hw4.tex:142: Missing } inserted.
-<inserted text> 
-                }
-l.142         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATH335_hw4.tex:142: Extra \right.
-<argument> ...b_ma_n+c_ma_nb_n}{a_nb_nc_n}\right )
-                                                   
-l.142         \end{align*}
-                          
-I'm ignoring a \right that had no matching \left.
-
-./MATH335_hw4.tex:142: Missing { inserted.
-<inserted text> 
-                {
-l.142         \end{align*}
-                          
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./MATH335_hw4.tex:142: Missing } inserted.
-<inserted text> 
-                }
-l.142         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATH335_hw4.tex:142: Extra \right.
-<argument> ..._mb_n)+a_mb_nc_n}{a_nb_nc_n}\right )
-                                                  \\\\ &\frac {c_na_mb_n+c_n...
-l.142         \end{align*}
-                          
-I'm ignoring a \right that had no matching \left.
-
-./MATH335_hw4.tex:142: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.142         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATH335_hw4.tex:142: Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.142         \end{align*}
-                          
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./MATH335_hw4.tex:142: Missing { inserted.
-<inserted text> 
-                {
-l.142         \end{align*}
-                          
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./MATH335_hw4.tex:142: Missing } inserted.
-<inserted text> 
-                }
-l.142         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATH335_hw4.tex:142: Extra \right.
-<argument> ...b_ma_n+c_ma_nb_n}{a_nb_nc_n}\right )
-                                                   
-l.142         \end{align*}
-                          
-I'm ignoring a \right that had no matching \left.
-
-./MATH335_hw4.tex:142: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.142         \end{align*}
-                          
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./MATH335_hw4.tex:142: Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.142         \end{align*}
-                          
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./MATH335_hw4.tex:142: Missing { inserted.
-<inserted text> 
-                {
-l.142         \end{align*}
-                          
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
 
 [2] [3] [4] (./MATH335_hw4.aux)
 Package rerunfilecheck Info: File `MATH335_hw4.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9519 strings out of 478542
- 136989 string characters out of 5854402
- 455068 words of memory out of 5000000
+ 9514 strings out of 478542
+ 136953 string characters out of 5854402
+ 453068 words of memory out of 5000000
  27265 multiletter control sequences out of 15000+600000
- 434795 words of font info for 103 fonts, out of 8000000 for 9000
+ 435902 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,66p,228b,613s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,9n,66p,398b,608s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
-c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MATH335_hw4.pdf (4 pages, 77100 bytes).
+mbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
+c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2021/te
+xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on MATH335_hw4.pdf (4 pages, 82776 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 33 named destinations out of 1000 (max. 500000)
+ 93 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
+ 27 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

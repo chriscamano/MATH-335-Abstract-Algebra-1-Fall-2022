@@ -97,30 +97,15 @@ only 1 a is a group associativity fails.
     \end{proof}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item[b)] the set of rational numbers in lowest terms whose denominators are even
-    \begin{proof}\\
-      \\
-      Let G be the following set:
+    \begin{proof}
+      This set is not closed under the binary operator, consider the following example:
       \[
-        G=\left\{\frac{m}{n},n=2k,n\neq0,k,m\in \Z\right\}
+        a=\frac{1}{6}\quad b=\frac{1}{6}
       \]
-      \begin{enumerate}
-        \item Proof of associativity over operator
-        let a,b,c$\in$G where:
-        \[
-          a=\frac{a_m}{a_n}\quad b=\frac{b_m}{b_n}\quad
-          c=\frac{c_m}{c_n}
-        \]
-        \begin{align*}
-          &\left(\frac{a_m}{a_n}+\frac{b_m}{b_n}\right)+\frac{c_m}{c_n}=\frac{a_m}{a_n}+\left(\frac{b_m}{b_n}+\frac{c_m}{c_n}\right)\\\\
-          &\frac{a_mb_n+b_ma_n}{a_nb_n}+\frac{c_m}{c_n}=\frac{a_m}{a_n}+\left(\frac{b_mc_n+c_mb_n}{b_nc_n}\right)\\\\
-          &\frac{c_n(a_mb_n+b_ma_n)+c_ma_nb_n}{a_nb_nc_n}=\frac{a_n(b_mc_n+c_mb_n)+a_mb_nc_n}{a_nb_nc_n}\right)\\\\
-          &\frac{c_na_mb_n+c_nb_ma_n+c_ma_nb_n}{a_nb_nc_n}=\frac{c_na_mb_n+c_nb_ma_n+c_ma_nb_n}{a_nb_nc_n}\right)
-        \end{align*}
-        The denominator $a_nb_nc_n$ is the product of three even numbers which is also even preserving the construction of G.
-        \item Proof of existence of identity element\\
-        The Identity element for this set is the element: $\frac{0}{2}=0$
-        \item  Proof of existence of inverse of operator\\  For all g$\in G$ the additive inverse is the element $-g$
-      \end{enumerate}
+      under addition this yields:
+      \[
+        \frac{1}{6}+\frac{1}{6}=\frac{1}{3}\notin G
+      \] Thus since the binary operator fails under closure, this set and operation do \textbf{not} form a group
     \end{proof}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item[c)] the set of rational numbers of absolute value $<1$
@@ -130,23 +115,14 @@ only 1 a is a group associativity fails.
       G=\left\{\frac{m}{n},n\neq0,n,m\in \Z, |\frac{m}{n}|<1\right\}
     \]
     \begin{proof}\\
-      \begin{enumerate}
-        \item Proof of associativity over operator
-        let a,b,c$\in$G where:
-        \[
-          a=\frac{a_m}{a_n}\quad b=\frac{b_m}{b_n}\quad
-          c=\frac{c_m}{c_n}
-        \]
-        \begin{align*}
-          &\left(\frac{a_m}{a_n}+\frac{b_m}{b_n}\right)+\frac{c_m}{c_n}=\frac{a_m}{a_n}+\left(\frac{b_m}{b_n}+\frac{c_m}{c_n}\right)\\\\
-          &\frac{a_mb_n+b_ma_n}{a_nb_n}+\frac{c_m}{c_n}=\frac{a_m}{a_n}+\left(\frac{b_mc_n+c_mb_n}{b_nc_n}\right)\\\\
-          &\frac{c_n(a_mb_n+b_ma_n)+c_ma_nb_n}{a_nb_nc_n}=\frac{a_n(b_mc_n+c_mb_n)+a_mb_nc_n}{a_nb_nc_n}\right)\\\\
-          &\frac{c_na_mb_n+c_nb_ma_n+c_ma_nb_n}{a_nb_nc_n}=\frac{c_na_mb_n+c_nb_ma_n+c_ma_nb_n}{a_nb_nc_n}\right)
-        \end{align*}
-
-        \item Proof of existence of identity element
-        \item  Proof of existence of inverse of operator
-      \end{enumerate}
+      The binary operator of addition fails for this set when dealing with elements whose sum is greater than one. There are infinite examples of this, let us pick an apparent one:
+      \[
+        a=\frac{1}{2}\quad b=\frac{1}{2}
+      \]
+      \[
+        a+b=\frac{1}{2}+\frac{1}{2}=1\notin G
+      \]
+      Due to the fact that the binary operator fails for closure this operator and set G do \textbf{not} form a group
     \end{proof}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
      \item[d)] the set of rational numbers of
@@ -157,11 +133,14 @@ only 1 a is a group associativity fails.
        G=\left\{\frac{m}{n},n\neq0,k,m\in \Z, |\frac{m}{n}|>1\right\}\cup \{0\}
      \]
      \begin{proof}
-       \begin{enumerate}
-         \item Proof of associativity over operator
-         \item Proof of existence of identity element
-         \item  Proof of existence of inverse of operator
-       \end{enumerate}
+       Due to the construction of G taking the absolute value over each of its elements this opens weaknesses in the closure of the binary operator. We can easily pick negative values less than -1 and show that under addition with a positive element that we can arrive at a value less than 1 when the difference between our selection of a and b is satisfactory:
+       \[
+         a=\frac{-5}{3}\quad b=\frac{3}{2}
+       \]
+       \[
+         a+b=\frac{-5}{3}+\frac{3}{2}=\frac{-1}{6}\notin G
+       \]
+       Thus, again, since we fail under closure of the binary operator the set G does \textbf{not} form a group under the operator of addition
      \end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    \end{itemize}
@@ -182,6 +161,15 @@ only 1 a is a group associativity fails.
 \item Let $G = \{z \in \C \, : \, z^n = 1 \mbox{  for some nonnegative integer  } n\}$. Prove that $G$ is a group under multiplication (called the groups of {\it roots of unity} in $\C$).
 \begin{proof}
   \begin{enumerate}
+     \item Proof of Closure under operator:
+     let :
+     \[
+       a=z_1^a=1\quad b=z_2^b=1
+     \]
+     Take $z_{1,2}=z_1z_2$ and $n_{1,2}=ab$
+     \begin{align*}
+       z_{1,2}^{ab}=(z_1z_2)^{ab}=z_1^{ab}z_2^{ab}=(z_1^a)^b(z_2^b)^a=1^b1^a=1
+     \end{align*}
     \item Proof of associativity over operator
     \item Proof of existence of identity element
     \item  Proof of existence of inverse of operator
@@ -193,6 +181,7 @@ only 1 a is a group associativity fails.
   \item[a)] Prove that $G$ is a group under addition.
   \begin{proof}
     \begin{enumerate}
+       \item Proof of Closure under operator
       \item Proof of associativity over operator\\
       Let
       \[
@@ -205,6 +194,7 @@ only 1 a is a group associativity fails.
         &a_1+b_1\sqrt{2}+a_2+b_2\sqrt{2}+a_3+b_3\sqrt{2}=a_1+b_1\sqrt{2}+a_2+b_2\sqrt{2}+a_3+b_3\sqrt{2}
       \end{align*}
       \item Proof of existence of identity element
+
       \item  Proof of existence of inverse of operator
     \end{enumerate}
   \end{proof}
@@ -212,6 +202,7 @@ only 1 a is a group associativity fails.
    \item[b)] Prove that the nonzero elements of $G$ are a group under multiplication [``Rationalize the denominators'' to find the inverses].
    \begin{proof}
      \begin{enumerate}
+       \item Proof of Closure under operator
        \item Proof of associativity over operator
        \item Proof of existence of identity element
        \item  Proof of existence of inverse of operator
