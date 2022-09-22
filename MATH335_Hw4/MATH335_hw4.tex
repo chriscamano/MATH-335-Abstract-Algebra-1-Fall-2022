@@ -34,7 +34,7 @@
 \newtheorem{proposition}{Proposition}
 
 \author{Chris Camano: ccamano@sfsu.edu}
-\title{MATH 335  Homework 3 }
+\title{MATH 335  Homework 4 }
 \date
 
 \newcommand{\Z}{\mathbb{Z}}
@@ -63,11 +63,26 @@
 \begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Deterimine which one of the following sets is a group under addition:
-Addition is a binary operator by the proof provided in class, therefore we will validate the properties of each group accepting that addition is binary operator in these contexts.\\\\
-only 1 a is a group associativity fails.
-\\\\
-
   \begin{itemize}
+    Proof of closure under addition: \\
+    \\
+    let our two elements be from the set G as follows:
+    \[
+      a=\frac{a_m}{a_n}\quad b=\frac{b_m}{b_n}
+    \]
+    \begin{align*}
+      \frac{a_m}{a_n}+\frac{b_m}{b_n}=\frac{a_mb_n+a_nb_m}{b_mb_n}
+    \end{align*}
+    Let $b_m=2k+1, k\in Z\quad b_n=2l+1, l\in \Z$
+    \[
+      \frac{a_mb_n+a_nb_m}{b_mb_n}=\frac{a_mb_n+a_nb_m}{(2k+1)(2l+1)}
+    \]
+    \[
+      \frac{a_mb_n+a_nb_m}{b_mb_n}=\frac{a_mb_n+a_nb_m}{4kl+2k+2l+1}
+    \]
+    Thus since the denominator is still an odd number we have shown closure for the operation.
+    \begin{align*}
+    \end{align*}
     \item[a)] the set of rational numbers in lowest terms whose denominators are odd
     \begin{proof}
       \\
@@ -94,6 +109,7 @@ only 1 a is a group associativity fails.
         \item  Proof of existence of inverse of operator\\
         For all g$\in G$ the additive inverse is the element $-g$
       \end{enumerate}
+      Thus we have proven that the set G and the operator of addition form a group.
     \end{proof}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item[b)] the set of rational numbers in lowest terms whose denominators are even
@@ -147,18 +163,47 @@ only 1 a is a group associativity fails.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \item Let $G = \{x \in \R \, : \, 0 \leq x < 1\}$ and for $x,y \in G$ let $x \cdot y$ be the fractional part of $x + y$ (i.e. $ x \cdot y = x + y - [x+y]$ where $[a]$ is the greatest
    integer less than or equal to $a$). Prove that $\cdot$ is a binary operation on $G$ and that $G$ is a group.
-   \begin{proof}Proof that $\cdot$ is a binary operator
-
+   \begin{proof}\\
+     Proof that $\cdot$ is a binary operator\\
+     For all x and y $\in G$ under out operator we are considering the sum of two numbers less than one and subtracting the greatest integer less than or equal to their sum leaving behind the remainder. Since the values of the elements of G are less than one then we have the following correspondence:
+     \[
+       0\leq x+y<2
+     \]
+     This implies that for all sums the maximum integer present can only be at most one since the sum is always less than two. Subtracting one from the sum when it is present will leave behind a fractional component that by definition would be element of G. Thus this implies closure under the operator.
    \end{proof}
    \begin{proof} Proof that G is a group
      \begin{enumerate}
-       \item Proof of associativity over operator
-       \item Proof of existence of identity element
-       \item  Proof of existence of inverse of operator
+       \item Proof of associativity over operator\\
+       \begin{align*}
+         &(x \cdot y)\cdot z =(x \cdot y)\cdot z\\
+         &(x \cdot y)\cdot z =(x+y-[x+y])\cdot z\\
+         &(x \cdot y)\cdot z =(x+y-[x+y])+z-[(x+y-[x+y]+z]\\
+         &(x \cdot y)\cdotz= x+y+z-[x+y]-[x+y+z]+[x+y]\\
+         &(x \cdot y)\cdotz= x+y+z-[x+y+z]\\
+         &(x \cdot y)\cdotz= x+y+z-[x+y+z]+[y+z]-[y+z]\\
+         &(x \cdot y)\cdotz= x+y+z-[x+y+z-[y+z]]-[y+z]\\
+         &(x \cdot y)\cdot z= x\cdot(y \cdot z)
+       \end{align*}
+
+       \item Proof of existence of identity element\\
+       Consider the case of 0. $0 \in G$ and for all elements g in  G:
+       \[
+         g \cdot 0 = g+0-[g+0]=g
+       \]
+       \item  Proof of existence of inverse of operator\\
+       We need some element in G that takes us back to zero under our binary operator, let us solve for when this would happen. We would need to have a like term for the first sum of the two elements under the operator and a like term for the subtracted integer sum so that the difference will be 0 :
+       For a given $g\in G$ consider the value (1-g). (1-g) is always in G since the elements of g are less than one. this gives:
+       \begin{align*}
+         &g+(1-g)-[g+1-g]\\
+         &1-[1]\\
+         &0
+       \end{align*}
+       so we have shown that 1-g is the inverse of any g $\in G$ under our operator
      \end{enumerate}
+     Thus we have proven that our set G with our binary operator form a group.
    \end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item Let $G = \{z \in \C \, : \, z^n = 1 \mbox{  for some nonnegative integer  } n\}$. Prove that $G$ is a group under multiplication (called the groups of {\it roots of unity} in $\C$).
+\item Let $G = \{z \in \C \, : \, z^n = 1 \mbox{  for some nonnegative integer  } n\}\{0}$. Prove that $G$ is a group under multiplication (called the groups of {\it roots of unity} in $\C$).
 \begin{proof}
   \begin{enumerate}
      \item Proof of Closure under operator:
@@ -170,10 +215,36 @@ only 1 a is a group associativity fails.
      \begin{align*}
        z_{1,2}^{ab}=(z_1z_2)^{ab}=z_1^{ab}z_2^{ab}=(z_1^a)^b(z_2^b)^a=1^b1^a=1
      \end{align*}
-    \item Proof of associativity over operator
+    \item Proof of associativity over operator\\
+    All elements in G are also elements of $\mathbb{C}$ so in turn they should all be associative under multiplication: proof:\\\\
+    Let $x,y,z\in \mathbb{C}$
+    \begin{align*}
+      &(xy)z=((a+ib)(c+id))(e+if)\\
+      &(xy)z=((ac - bd) +i(ad + cb))(e + if)\\
+      &(xy)z=((ac - bd)e - (ad + cb)f) + i)(ac - bd)f + (ad + cb)e)\\
+      &(xy)z=(a(ce - df) - b(cf + ed)) + i(b(ce - df) + a(ed + cf)\\
+      &(xy)z= (a + ib)((cf - df) + i(cf + ed))\\
+      &(xy)z=x(yz)
+    \end{align*}
+
+
     \item Proof of existence of identity element
-    \item  Proof of existence of inverse of operator
+    The identity element of this set under the operation of multiplication is the number 1 which is an element of $\mathbb{C}$ This is because:
+  \[
+    \forall z \in \mathbb{C}\quad  1^nz^n=z^n
+  \]
+    \item  Proof of existence of inverse of operator\\
+    The inverse of a given element in G would be the term:
+    \[
+      \tilde{z}=\left(\frac{1}{z}\right)^n=\frac{1}{z^n}
+    \]
+    $\tilde{z}\in \G$ by the fact that:
+    \begin{align*}
+      &z^n=1\\
+      &1=\frac{1}{z^n}
+    \end{align*}
   \end{enumerate}
+  Thus we have shown that this set with the binary operator of addition form a group.
 \end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Let $G = \{ a + b\sqrt{2} \, : \, a, b \in \Q\}$.
@@ -182,6 +253,14 @@ only 1 a is a group associativity fails.
   \begin{proof}
     \begin{enumerate}
        \item Proof of Closure under operator
+       let our two elements be:
+       \[
+         a+b\sqrt{2}\quad x+y\sqrt{2}
+       \]
+       \begin{align*}
+         a+b\sqrt{2}+x+y\sqrt{2}=(a+x)+(b+y)\sqrt{2}
+       \end{align*}
+       This is an element of G and thus addition is a satisfactory binary operator
       \item Proof of associativity over operator\\
       Let
       \[
@@ -194,20 +273,76 @@ only 1 a is a group associativity fails.
         &a_1+b_1\sqrt{2}+a_2+b_2\sqrt{2}+a_3+b_3\sqrt{2}=a_1+b_1\sqrt{2}+a_2+b_2\sqrt{2}+a_3+b_3\sqrt{2}
       \end{align*}
       \item Proof of existence of identity element
-
-      \item  Proof of existence of inverse of operator
+      Let $a=b=0$ this the we have $0+0\sqrt{2}\in G$ which implies that $\forall g\in G g+0=g$ Which means that 0 is our identity element.
+      \item  Proof of existence of inverse of operator\\
+      To identify the inverse of this group we need some value who when summed with a given $g\inG$ returns us to the identity. That value is the following: let$g=a+b\sqrt{2}$, the inverse would then be the following element
+      \[
+        -a-b\sqrt{2}
+      \]
+      as :
+      \[
+        a+b\sqrt{2}+(-a-b\sqrt{2})=0
+      \]
     \end{enumerate}
+    Thus the set G and the binary operation of addition form a group
   \end{proof}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    \item[b)] Prove that the nonzero elements of $G$ are a group under multiplication [``Rationalize the denominators'' to find the inverses].
    \begin{proof}
      \begin{enumerate}
-       \item Proof of Closure under operator
+       \item Proof of Closure under operator\\
+        let our two elements be the following:
+        \[
+          a+b\sqrt{2}\quad x+y\sqrt{2}
+        \]
+        \begin{align*}
+            &(a+b\sqrt{2})(x+y\sqrt{2})\\
+            &ax+ay\sqrt{2}+bx\sqrt{2}+2by\\
+            &(ax+2by)+(bx+ay)\sqrt{2}
+        \end{align*}
+        We have shown that this element is still in G since the product of the intermediate terms will always be an element of $\mathbb{Q}$ under closure of multiplication in $\mathbb{Q}$
        \item Proof of associativity over operator
-       \item Proof of existence of identity element
-       \item  Proof of existence of inverse of operator
+       Let
+       \[
+         a=a_1+b_1\sqrt{2}\quad b=a_2+b_2\sqrt{2})\quad c= a_3+b_3\sqrt{2}
+       \]
+        \begin{align*}
+          &(ab)c=a(bc)\\
+          &(a_1+b_1\sqrt{2}(a_2+b_2\sqrt{2}))a_3+b_3\sqrt{2}=a_1+b_1\sqrt{2}(a_2+b_2\sqrt{2}(a_3+b_3\sqrt{2}))\\
+          &(a_1a_2+a_1b_2\sqrt{2}+a_2b_1\sqrt{2}+2b_1b_2)a_3+b_3\sqrt{2}=a_1+b_1\sqrt{2}(a_2a_3+a_2b_3\sqrt{2}+a_3b_2\sqrt{2}+2b_2b_3)\\
+          &a_1a_2a_3+a_1a_2b_3\sqrt{2}
+          +a_1a_3b_2\sqrt{2}+2a_1b_1b_3+
+          a_2a_3b_1\sqrt{2}+2a_2b_1b_3+
+          2a_1b_1b_2a_3+2b_1b_2b_3\sqrt{2}=\\
+          &a_1a_2a_3+a_1a_2b_3\sqrt{2}
+          +a_1a_3b_2\sqrt{2}+2a_1b_1b_3+
+          a_2a_3b_1\sqrt{2}+2a_2b_1b_3+
+          2a_1b_1b_2a_3+2b_1b_2b_3\sqrt{2}\\
+        \end{align*}
+       \item Proof of existence of identity element\\
+       Since we are dealing with multiplication typically the identity element is the concept of 1 . Here that concept manifests as the term:
+       \[
+         1+0\sqrt{2}
+       \]
+       And for all values in G multiplying any given value returns the original value thus this is our identity.
+       \item  Proof of existence of inverse of operator\\
+       To identitfy the multiplictive inverse we must solve the following equation:
+       \begin{align*}
+         &(a+b\sqrt{2})x=1\\
+         &x=\frac{1}{a+b\sqrt{2}}\\
+         &x=\frac{1}{a+b\sqrt{2}}\frac{a-b\sqrt{2}}{a-b\sqrt{2}}=\frac{a-b\sqrt{2}}{a^2-2b^2}
+       \end{align*}
+       $\forall g \in G$ of the form $g=a+b\sqrt{2}$ we have the following:
+       \[
+         a+b\sqrt{2}\left(\frac{a-b\sqrt{2}}{a^2-2b^2}\right)=\frac{a^2-2b^2}{a^2-2b^2}=1
+       \]
+       Thus we have proven the existence of a multiplicitive inverse of the form:
+       \[
+        \left( \frac{1}{a^2-2b^2}\right)a+\left(\frac{-1}{a^2-2b^2}\right)b\sqrt{2}
+       \]
      \end{enumerate}
    \end{proof}
+   Thus the set G and the binary operator of multiplication form a group.
   \end{itemize}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \end{enumerate}

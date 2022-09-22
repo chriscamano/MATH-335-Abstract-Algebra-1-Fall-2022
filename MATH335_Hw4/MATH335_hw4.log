@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  21 SEP 2022 09:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  22 SEP 2022 10:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -466,181 +466,222 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
 
  []
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 70.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 70.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 70.
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
-
- []
-
-
-./MATH335_hw4.tex:74: LaTeX Error: There's no line here to end.
+./MATH335_hw4.tex:86: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.74       L
+l.86     \item[a)]
+                   the set of rational numbers in lowest terms whose denomin...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./MATH335_hw4.tex:86: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86     \item[a)]
+                   the set of rational numbers in lowest terms whose denomin...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./MATH335_hw4.tex:86: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86     \item[a)]
+                   the set of rational numbers in lowest terms whose denomin...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./MATH335_hw4.tex:88: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88       \\
+             
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./MATH335_hw4.tex:89: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89       L
             et G be the following set:
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
-./MATH335_hw4.tex:90: Missing } inserted.
+./MATH335_hw4.tex:105: Missing } inserted.
 <inserted text> 
                 }
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:90: Extra \right.
+./MATH335_hw4.tex:105: Extra \right.
 <argument> ..._mb_n)+a_mb_nc_n}{a_nb_nc_n}\right )
                                                   \\\\ &\frac {c_na_mb_n+c_n...
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I'm ignoring a \right that had no matching \left.
 
-./MATH335_hw4.tex:90: Missing { inserted.
+./MATH335_hw4.tex:105: Missing { inserted.
 <inserted text> 
                 {
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./MATH335_hw4.tex:90: Missing } inserted.
+./MATH335_hw4.tex:105: Missing } inserted.
 <inserted text> 
                 }
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:90: Extra \right.
+./MATH335_hw4.tex:105: Extra \right.
 <argument> ...b_ma_n+c_ma_nb_n}{a_nb_nc_n}\right )
                                                    
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I'm ignoring a \right that had no matching \left.
 
-./MATH335_hw4.tex:90: Missing { inserted.
+./MATH335_hw4.tex:105: Missing { inserted.
 <inserted text> 
                 {
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./MATH335_hw4.tex:90: Missing } inserted.
+./MATH335_hw4.tex:105: Missing } inserted.
 <inserted text> 
                 }
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:90: Extra \right.
+./MATH335_hw4.tex:105: Extra \right.
 <argument> ..._mb_n)+a_mb_nc_n}{a_nb_nc_n}\right )
                                                   \\\\ &\frac {c_na_mb_n+c_n...
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I'm ignoring a \right that had no matching \left.
 
-./MATH335_hw4.tex:90: Missing \endgroup inserted.
+./MATH335_hw4.tex:105: Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:90: Misplaced \omit.
+./MATH335_hw4.tex:105: Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-./MATH335_hw4.tex:90: Missing { inserted.
+./MATH335_hw4.tex:105: Missing { inserted.
 <inserted text> 
                 {
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./MATH335_hw4.tex:90: Missing } inserted.
+./MATH335_hw4.tex:105: Missing } inserted.
 <inserted text> 
                 }
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:90: Extra \right.
+./MATH335_hw4.tex:105: Extra \right.
 <argument> ...b_ma_n+c_ma_nb_n}{a_nb_nc_n}\right )
                                                    
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I'm ignoring a \right that had no matching \left.
 
-./MATH335_hw4.tex:90: Missing \endgroup inserted.
+./MATH335_hw4.tex:105: Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH335_hw4.tex:90: Misplaced \omit.
+./MATH335_hw4.tex:105: Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-./MATH335_hw4.tex:90: Missing { inserted.
+./MATH335_hw4.tex:105: Missing { inserted.
 <inserted text> 
                 {
-l.90         \end{align*}
-                         
+l.105         \end{align*}
+                          
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
@@ -649,31 +690,177 @@ Try to go on, since this might almost work.
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-./MATH335_hw4.tex:118: LaTeX Error: There's no line here to end.
+./MATH335_hw4.tex:134: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.118       T
+l.134       T
              he binary operator of addition fails for this set when dealing ...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[2] [3] [4] (./MATH335_hw4.aux)
+[2]
+
+./MATH335_hw4.tex:167: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.167      P
+            roof that $\cdot$ is a binary operator\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
+
+ []
+
+./MATH335_hw4.tex:186: Undefined control sequence.
+<argument> ...[(x+y-[x+y]+z]\\ &(x \cdot y)\cdotz 
+                                                  = x+y+z-[x+y]-[x+y+z]+[x+y...
+l.186        \end{align*}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_hw4.tex:186: Undefined control sequence.
+<argument> ...-[x+y+z]+[x+y]\\ &(x \cdot y)\cdotz 
+                                                  = x+y+z-[x+y+z]\\ &(x \cdo...
+l.186        \end{align*}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_hw4.tex:186: Undefined control sequence.
+<argument> ... x+y+z-[x+y+z]\\ &(x \cdot y)\cdotz 
+                                                  = x+y+z-[x+y+z]+[y+z]-[y+z...
+l.186        \end{align*}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_hw4.tex:186: Undefined control sequence.
+<argument> ...z]+[y+z]-[y+z]\\ &(x \cdot y)\cdotz 
+                                                  = x+y+z-[x+y+z-[y+z]]-[y+z...
+l.186        \end{align*}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_hw4.tex:186: Undefined control sequence.
+<argument> ...[(x+y-[x+y]+z]\\ &(x \cdot y)\cdotz 
+                                                  = x+y+z-[x+y]-[x+y+z]+[x+y...
+l.186        \end{align*}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_hw4.tex:186: Undefined control sequence.
+<argument> ...-[x+y+z]+[x+y]\\ &(x \cdot y)\cdotz 
+                                                  = x+y+z-[x+y+z]\\ &(x \cdo...
+l.186        \end{align*}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_hw4.tex:186: Undefined control sequence.
+<argument> ... x+y+z-[x+y+z]\\ &(x \cdot y)\cdotz 
+                                                  = x+y+z-[x+y+z]+[y+z]-[y+z...
+l.186        \end{align*}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MATH335_hw4.tex:186: Undefined control sequence.
+<argument> ...z]+[y+z]-[y+z]\\ &(x \cdot y)\cdotz 
+                                                  = x+y+z-[x+y+z-[y+z]]-[y+z...
+l.186        \end{align*}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[3]
+./MATH335_hw4.tex:206: Extra }, or forgotten $.
+l.206 ...  for some nonnegative integer  } n\}\{0}
+                                                  $. Prove that $G$ is a gro...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--221
+
+ []
+
+./MATH335_hw4.tex:241: Undefined control sequence.
+l.241     $\tilde{z}\in \G
+                          $ by the fact that:
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[4]
+./MATH335_hw4.tex:278: Undefined control sequence.
+l.278 ...value who when summed with a given $g\inG
+                                                  $ returns us to the identi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[5]
+Overfull \hbox (23.63518pt too wide) detected at line 321
+[]
+ []
+
+[6] [7] (./MATH335_hw4.aux)
 Package rerunfilecheck Info: File `MATH335_hw4.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9514 strings out of 478542
- 136953 string characters out of 5854402
- 453068 words of memory out of 5000000
- 27265 multiletter control sequences out of 15000+600000
+ 9518 strings out of 478542
+ 136976 string characters out of 5854402
+ 452068 words of memory out of 5000000
+ 27266 multiletter control sequences out of 15000+600000
  435902 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,66p,398b,608s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,9n,66p,398b,620s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1
@@ -682,10 +869,10 @@ sfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/sy
 mbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2021/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MATH335_hw4.pdf (4 pages, 82776 bytes).
+Output written on MATH335_hw4.pdf (7 pages, 92410 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 27 named destinations out of 1000 (max. 500000)
+ 107 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
+ 30 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
