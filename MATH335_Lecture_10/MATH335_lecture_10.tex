@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
  \author{Chris Camano: ccamano@sfsu.edu}
- \title{MATH 335  lecture 5 }
+ \title{MATH 335  lecture 10 }
  \date
 
 \usepackage{mathptmx}
@@ -49,4 +49,59 @@
 
 \begin{document}
 \maketitle
+
+\sect{Exam discussion}
+Midterm is two parts one in class and one out of class. \\
+In person exam will be short questions, including definitions euler phi function for example with corresponding example. Simple computations, groups will be on test, compute  arithmetic group properties over binary operators.. Small qeuestions with justification and small proofs. The test is testing your attention note taking and proficiency with the information. \\
+The take home exam will have a similar structure to the homework should be done within 36 hours done in latex. Take home exam is open book and open notes. First part is closed book no external resources. \\
+Hosten will poste a study guide outlining the primary ideas on the test. He posts study guides are a linear retellling of the information presented in the course each of which can function as a seed for future studying chapter 3 of the text book. All matieral up to today will be on the exam. Sounds like tuesday will be review , study guide will be up friday evening.\\\\
+Take home exam will be individual.
+\definition Intergs mod m\\
+$$\Z_n=\{[0],[1],...,[n-1]\}$$
+Under a binary operation defined as follows this forms a group:
+\[
+  [a] \textbf{+} [b]=[a+b \mod m ]
+\]
+This realtion is well defined and independent of the choice of equivilance class.
+
+  \begin{itemize}
+    \item Associative: [a]+([b]+[c])=([a]+[b])+[c], leveraging integer addition associativity.
+    \item identity element: [0]
+    \item inverse element:[-1] $\forall a \in \Z_n$
+  \end{itemize}
+Remark: if $0\leq a<m-1$ then the inverse of [a] is $[n-a]$\\
+\[
+  |\Z_n|
+\]
+\textbf{Additional binary operation for $\Z_n$}\\
+Let the binary operation be as follows:
+\[
+  [a]\cdot [b]:=[ab\mod m ]
+\]\\
+Proof that this binary operator is well defined. \\
+Suppose $[a]=[a^*], [b]=[b^*]$, and show that:
+\[
+  [a][b]=[a^*][b^*]
+\]
+\begin{align*}
+  &[a]=[a^*]\rightarrow n|a-a^*\\
+  &[b]=[b^*]\rightarrow n|b-b^*\\
+\end{align*}
+We need to show:
+\[
+  [ab]=[a^*b^*]\sim n|ab-a^*b^*
+\]
+\begin{align*}
+  &ab-a^*b*=ab-ab^*+ab^*-a^*b^*\\
+  &a(b-b^*)+b^*(a-a^*)\\
+  &n|a-a^*,n|b-b^*\rightarrow n|a(b-b^*)+b^*(a-a^*)\rightarrow n|ab-a^*b^*
+\end{align*}
+There is not an inverse so this is not a group [0] will never have an inverse.
+There is a way to "fix" multiplication over $\Z_n$ by only looking at the values who do have an inverse. :
+\\
+\definition Instead let $$G=\{[a]\in \Z_n: [a] \text{ has a multiplicitive inverse}\}$$ This set is called the group of units modulo n, commonly denoted by U(n)
+
+The cardinality of the group of units modulo n is equivilant to the phi function of n. This is also the reduced residue system of mod n over the integers.
+
+This is a binary operation because the values in the set are relatively prime with n so their product is as well,.  
 \end{document}
