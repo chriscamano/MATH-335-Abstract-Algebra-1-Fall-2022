@@ -49,9 +49,80 @@
 
 \begin{document}
 \maketitle
+\sect{Further properties of groups}
+\definition (3.19) How to compute the inverse of the product of elements in a group. \\
+Let G be a group and $a,b\in G $ then $(ab)^{-1}=b^{-1}a^{-1}$\\
+\begin{proof}
+  \begin{align*}
+    &ab(b^{-1}a^{-1})\\
+    &aea^{-1}\\
+    &aa^{-1}\\
+    &e
+  \end{align*}
+  The proof must be validated the other way around as well which of course works. So we conclude that : $(ab)^{-1}=b^{-1}a^{-1}$
+\end{proof}
+\\
+\definition (3.20) Let G be a group and $a\in G $ then there exists an inverse of a $a^{-1}$ and the inverse of this term: $(a^{-1})^{-1}=a$. This is true because of the same reason that a inverse is the inverse of a. They are inverses of eachother .\\\\
+\definition: Let G be a group, and $n>0$ be an integer. For any$g\in G $ we define:
+\[
+  g^n:=g \circ g\circ \cdots \circ g
+\]
+Also, \[
+  g^{-n}:=g^{-1}\circ g^{-1}\circ \cdots \circ g^{-1}
+\]
+\[
+  g^0=e
+\]\\\\
+\sect{Group Exponentiation rules}\\
+\definition(3.23) Let G be a group, and $g\in G$ For any two ingers$ m.n\in \Z$
+\begin{enumerate}
+  \item
+  \[
+    g^ng^m=g^{m+n}\\
+
+  \]
+  \item \[
+
+    (g^m)^n=g^{mn}
+  \]\begin{proof}
+    case 1: m,n $\geq$ 0, then we are fine since we have a positive sum over the number of multiplications. \\
+    case2: one of the exponents is negative, $m<0, n>0$ then we have a product of the inverse being composed with the positive composition leading to a sum over a positive and negative term which is equivilant again to the theorem in part a. \\
+    Case  3 is the same proof with swapped signs \\
+    case 4 is the case of both negative which again checks out.
+    $\tilde$ lazy dextromorphan proof
+\end{proof}
+\end{enumerate}
+\defintion 3.21/3.22\\
+Let G be a group and $ a,b,c\in G $.
+If ab=ac then b=c\\
+If ba=ca implies b=c\\
+This is true because of the following proof:
+\begin{proof}
+  \begin{align*}
+    &ab=ac\\
+    &\text{a has an inverse so}\\
+    &(\tilde{a}a)b=(\tilde{a}a)c\rightarrow b=c\\
+  \end{align*}
+  The other proof is symmetric.
+\end{proof}
 
 
-\definition
+In class midterm:
+The in class midterm will cover roughly the same amtierla on the take home exam, any material can be tested on either test. The in class exam is goin to be quick questions and quick answers, most likely there will be a unit group question . \\
+There will be true or false question 3 or 4 of them. \\
+\sect{New material}\\
+A new group is now being introduced
+The set of symmetries over a triangle. equipped with a binary operation where two bijections are composed with one another. \\
+\[
+  S_3=\text{ the set of all bijections from \{1,2,3} to \{1,2,3\}
+\]
+The operator is the composition of two bijective functions which inturn is another bijection. 
+
+
+
+
+
+
 
 
 \end{document}
