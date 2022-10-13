@@ -1,0 +1,490 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 335  lecture 14 }
+\date
+
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\lcm}{\mathrm{lcm}}
+
+
+
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+\newcommand{\bigline}{\\\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\}
+
+\begin{document}
+\maketitle
+%\homework{}{Homework V}
+
+
+\section* {Problem# 1}
+Consider the following permutations in $S_{15}$:
+  $$ \sigma = \left( \begin{array}{ccccccccccccccc} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+                       13& 2 &15&14&10& 6 &12& 3 & 4 &   1 &   7 &   9 &   5 & 11 &   8 \end{array} \right) $$
+  $$      \tau = \left( \begin{array}{ccccccccccccccc} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+                        14& 9 &10& 2 &12 & 6 & 5 & 11 & 15 &   3 &   8 &   7 &   4 & 1 &   13 \end{array} \right). $$
+Compute $\sigma^2$, $\sigma \tau$, $\tau \sigma$, $\tau^2\sigma$, and $\sigma^{-1} \tau$.
+
+\begin{enumerate}
+  \item Derivation of $\sigma^2$\\
+  $$ \sigma = \left( \begin{array}{ccccccccccccccc} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+                       13& 2 &15&14&10& 6 &12& 3 & 4 &   1 &   7 &   9 &   5 & 11 &   8 \end{array} \right)
+  $$
+  \\$\sigma^2$ is the effect of composing the permutation sigma on the identity two consecutive times, for elements of such a large group, it makes sense to consider the effect of manually tracing out the bijection, following the mappings of each corresponding element. The effect of applying sigma a single time is defined by the assignment of the permutation "matrix" above. So to identity the effect of a subsequent composition of this permutation we consider the re mapping of the result of applying sigma.\\
+  \[
+  \sigma^2 = \sigma\circ \sigma= \left(
+  \begin{array}{ccccccccccccccc}
+    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+
+    5 & 2 & 8 & 11 & 1 & 6 & 9 & 15 & 14 & 13 & 12 & 4 & 10 & 7 & 3
+  \end{array}
+  \right)
+  \]
+  \item Derivation of $\sigma \tau$\\
+  This composition is equivilant to:
+  \[
+    \sigma \circ \tau =\sigma(\tau(i)), i\in [1,15]
+  \]
+  $$
+    \sigma\tau=\left(
+    \begin{array}{ccccccccccccccc}
+      1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+
+      11 & 4 & 1 & 2 & 9 & 6 & 10 & 7 & 8 & 15 & 3 & 12 & 14 & 13 & 5
+    \end{array}
+    \right)
+    $$
+  \item Derivation of $\tau \sigma$\\
+  \[
+    \tau \circ \sigma =\tau(\sigma(i)), i\in [1,15]
+  \]
+  $$
+  \tau \circ \left( \begin{array}{ccccccccccccccc} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+  13& 2 &15&14&10& 6 &12& 3 & 4 &   1 &   7 &   9 &   5 & 11 &   8
+  \end{array}
+  \right)
+  $$
+  \[\tau\sigma=
+  \left(
+    \begin{array}{ccccccccccccccc}
+    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+
+    4 & 9 & 13 & 1 & 3 & 6 & 7 & 10 & 2 & 14 & 5 & 15 & 12 & 8 & 11
+    \end{array}
+    \right)
+  \]
+  \item Derivation of $\tau^2\sigma$\\
+  We must first find $\tau^2$ which is:
+  \[
+    \tau \circ \tau=\tau(\tau(i)),i\in [1,15]
+  \]
+  \[
+    \tau^2=
+    \left( \begin{array}{ccccccccccccccc}
+    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+    1 & 15 & 3 & 9 & 7 & 6 & 12 & 8 & 13 & 10 & 11 & 5 & 2 & 14 & 4
+    \end{array}
+    \right).
+  \]
+  Now for:
+  \[
+    \tau^2\circ \sigma=\tau^2(\sigma(i)),i\in [1,15]
+  \]
+  \[
+    \tau^2\sigma=
+    \left( \begin{array}{ccccccccccccccc}
+    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+    2 & 15 & 4 & 14 & 10 & 6 & 5 & 3 & 9 & 1 & 12 & 13 & 7 & 11 & 8
+    \end{array}
+    \right).
+  \]
+  \item Derivation of $\sigma^{-1} \tau$\\
+  We first define sigma inverse which is the inverse bijection found by manually mapping points back to the identity:
+  \[
+    \sigma^{-1}=\left( \begin{array}{ccccccccccccccc}
+    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+    10 & 2 & 8 & 9 & 13 & 6 & 11 & 15 & 12 & 5 & 14 & 7 & 1 & 4 & 3
+    \end{array}\right)
+  \]
+  now we have that:
+  \[
+    \sigma^{-1}\tau=\[
+      \left( \begin{array}{ccccccccccccccc}
+      1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+      4 & 12 & 5 & 2 & 7 & 6 & 13 & 14 & 3 & 8 & 15 & 11 & 9 & 10 & 1
+      \end{array}\right)
+    \]
+  \]
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigline
+\section* {Problem# 2}
+Here I will introduce a concept that we will take up very soon. Let $G$ be  group and let $g \in G$ be an element of the group. The {\it order} of $g$, denoted by $|g|$,
+  is the smallest positive number $n$ such that $g^n = e$. If there is no such $n$, we say that $g$ has infinite order.
+  \begin{itemize}
+     \item[a)] In any group, what is $|e|$ ?\\
+     If the order of an element of a group is the smallest positive number n such that that element composed n times equals the identity then the order of the identity element should always be 1.
+     \item[b)] Compute the order of the elements in $\Z_6$.\\
+     First let us list the elements of $\Z_6$:
+     \[
+      \Z_6=\{[0],[1],[2],[3],[4],[5]\}
+     \]
+     Here the identity element $[0]$ is of order 1 by (a)\\
+     \begin{align*}
+       &|[1]|:[1]+[1]+[1]+[1]+[1]+[1]=[6]\mod 6=[0]\therefore|[1]|=6\\\\
+       &|[2]|:[2]+[2]+[2]=[6]\mod 6=[0]\therefore |[2]|=3\\\\
+       &|[3]|:[3]+[3]=[6]\mod 6=[0]\therefore [3]=2\\\\
+       &|[4]|:[4]+[4]+[4]=[12]\mod 6=[0]\therefore |[4]|=3\\\\
+       &|[5]|:[5]+[5]+[5]+[5]+[5]+[5]=[30]\mod 6=[0]\therefore |[5]|=6\\\\
+     \end{align*}
+     \item[c)] Compute the order of the elements in $U(9)$.
+     \[
+       U_9=\{[1],[2],[4],[5],[7],[8]\}
+     \]
+     \begin{align*}
+       &|[1]|=1\text by (a)\\\\
+       &|[2]|:2^k\equiv 1 \mod 9, k=6\therefore |[2]|=6\\\\
+       &|[4]|:4^k\equiv 1 \mod 9, k=3\therefore |[4]|=3\\\\
+       &|[5]|:5^k\equiv 1 \mod 9, k=6\therefore |[5]|=6\\\\
+       &|[7]|:7^k\equiv 1 \mod 9, k=3\therefore |[7]|=3\\\\
+       &|[8]|:9^k\equiv 1 \mod 9, k=2\therefore |[8]|=2\\\\
+     \end{align*}
+     \item[d)] Compute the order of the elements in $S_3$.
+    $$
+    S_3=\left\{
+    \begin{bmatrix}
+      1&2&3\\
+      1&2&3
+    \end{bmatrix},
+    \begin{bmatrix}
+      1&2&3\\
+      1&3&2
+    \end{bmatrix},
+    \begin{bmatrix}
+      1&2&3\\
+      3&2&1
+    \end{bmatrix},
+    \begin{bmatrix}
+      1&2&3\\
+      2&1&3
+    \end{bmatrix},
+    \begin{bmatrix}
+      1&2&3\\
+      2&3&1
+    \end{bmatrix},
+    \begin{bmatrix}
+      1&2&3\\
+      3&1&2
+    \end{bmatrix}\right\}$$
+    \begin{align*}
+      &\left|
+      \begin{bmatrix}
+        1&2&3\\
+        1&2&3
+      \end{bmatrix}
+      \right|=1 \text{ by a}\\
+      &\left|
+      \begin{bmatrix}
+        1&2&3\\
+        1&3&2
+      \end{bmatrix}
+      \right|=2 \\
+      &\left|
+      \begin{bmatrix}
+        1&2&3\\
+        3&2&1
+      \end{bmatrix}
+      \right|=2 \\
+      &\left|
+      \begin{bmatrix}
+        1&2&3\\
+        2&1&3
+      \end{bmatrix}
+      \right|=2 \\
+      &\left|
+      \begin{bmatrix}
+        1&2&3\\
+        2&3&1
+      \end{bmatrix}
+      \right|=3 \\
+      &\left|
+      \begin{bmatrix}
+        1&2&3\\
+        3&1&2
+      \end{bmatrix}
+      \right|=3 \\
+    \end{align*}
+    For the second and third and fourth elements of $S_3$ we obtain an order of two since these permutations represent reflection about a fixed vertex two applications of the function return to identity. The last two elements have order 3 since they represent shifting the elements by one index and it would three compositions to return to the identity.
+     \item[e)] Find an element of $GL_2$ that has infinite order. Justify your choice.
+     Consider the matrix:
+     \[
+       \begin{bmatrix}
+         1& 1\\0&1
+       \end{bmatrix}
+     \]
+     This matrix is an element of GL2 since it has a determinant of 1 of meaning that for all compositions since $det(A)>0$ by invertible matrix theorem the matrix is invertible and thus an element of GL2, however note the property that:
+     \[
+       \begin{bmatrix}
+         1& 1\\0&1
+       \end{bmatrix}^n=\begin{bmatrix}
+         1& n\\0&1
+       \end{bmatrix}
+     \]
+     as shown in class, so we will never return to the identity meaning that this element has infinte order.
+      \item[f)] Find an element of order $6$ in $S_5$.
+      To find an element of order 6 in $S_5$ this is to ask which element of $S_5$ requires 6 compositions with itself to return to the identity element. Given that we have 5 elements we can imagine this problem as a pentagon and moving from vertex to vertex. Clearly the two rotation elements would then have order of 5 since it would require 5 compositions of a single vertex movement to arrive back at the identity. Fixing vertices and reflecting would give order 2 so we are forced to consider which symmetry has the desired property.
+      Consider the following element of $S_5$:
+      \[
+      \rho= \left( \begin{array}{ccccc}
+      1 & 2 & 3 & 4 & 5 \\
+      2&3&1&5&4
+      \end{array}\right)
+      \]
+      Then we can trace the effect of composig $\rho$ with itself to check whether or not its order is satisfactory:
+      \begin{align*}
+        &\rho=
+        \begin{bmatrix}
+        1 & 2 & 3 & 4 & 5 \\
+        2&3&1&5&4
+        \end{bmatrix}\\
+        &\rho^2=
+        \begin{bmatrix}
+        1 & 2 & 3 & 4 & 5 \\
+        3&1&2&4&5
+        \end{bmatrix}\\
+        &\rho^3=
+        \begin{bmatrix}
+        1 & 2 & 3 & 4 & 5 \\
+        1&2&3&5&4
+        \end{bmatrix}\\
+        &\rho^4=
+        \begin{bmatrix}
+        1 & 2 & 3 & 4 & 5 \\
+        2&3&1&4&5
+        \end{bmatrix}\\
+        &\rho^5=
+        \begin{bmatrix}
+        1 & 2 & 3 & 4 & 5 \\
+        3&1&2&5&4
+        \end{bmatrix}\\
+        &\rho^6=
+        \begin{bmatrix}
+        1 & 2 & 3 & 4 & 5 \\
+        1 & 2 & 3 & 4 & 5
+        \end{bmatrix}\\
+      \end{align*}
+      Thus element $\rho$ from $S_5$ has order 6.
+  \end{itemize}
+  \begin{proof}
+
+  \end{proof}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \bigline
+\section* {Problem# 3}
+
+ We showed that $S_3$ is a non-abelian group since we identified two particular elements $\sigma$ and $\tau$ in $S_3$ such that $\sigma \tau \neq \tau \sigma$.
+ Prove that $S_n$ is non-abelian for all $n\geq 3$. [use $\sigma$ and $\tau$ !]\\
+ \begin{proof}
+ Any symmetry group $S_n$ should have elements sigma in tau within them when you fix the values of $n\geq 3$ this is to say that
+ \[
+   \forall S_n\quad  \sigma_n=\left( \begin{array}{ccccc} 1 & 2 & 3&\cdots&n\\
+2 & 3 & 1 &\cdots&n\end{array} \right )\in S_n
+ \]
+ Fixing the values afterwards. Because a similar argument can be made for tau:
+ \[
+   \forall S_n\quad  \sigma_n=\left( \begin{array}{ccccc} 1 & 2 & 3&\cdots&n\\
+ 2 & 1 & 3 &\cdots&n\end{array} \right )\in S_n
+ \]
+
+  this implies that for any $S_n, n\geq 3$ we have the inclusion of two non commutative elements which then implies that the group as a whole is not abelian. From this observation we conclude that any symmetry group is non abelian by the existence of non commutative elements under the operation of function composition within the set.
+
+
+ \end{proof}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \bigline
+\section* {Problem# 4} Exercise 2 in Section 3.5 of our textbook.\\
+Which of the following multiplciation tables defined on the set G=$\{a,b,c,d\}$ form a group? Support your answer in each case. \\
+\begin{enumerate}
+  \item a\\
+  This table cannot be a group since there is not a row and column that read abcd. This row/col  is equivilant to composition with the group operator over the identity element. Since there is not a row with this property it cannot be the case that there is an identity element meaning a is not a group/
+  \item b\\
+  element a is the identity, this multiplication table is associative, ie symmetric meaning associativity is satisifed, every element has another element who once composed returns to a, meaning that every element has an inverse. We have satisifed the properties of a group and thus b is a group.
+  \item c\\
+  element a is the identity\\
+  the multiplication table is symmetric ie the group operator is associative\\
+  for b,c,d there exist an element who when composed returns a meaning there is an inverse for all elements. \\
+  Thus This is a group
+  \item d\\
+  note that $b\circ c=b$ but that $c\circ b =c $ meaning the operator is not associative so this cannot be a group.
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigline
+\section* {Problem# 5}
+ Let $H = \{ 2^k \, :\, k \in \Z\}$. Show that $H$ is a subgroup of $\Q^*$ (i.e. the group of nonzero rational numbers under multiplication).
+\begin{proof}
+To show that H is  a subgroup we can check whether or not for some $a,b\in H\quad ab^{-1}\in H$ by the proof provided in class on 10/11/22.\\
+If a,b are in H then we know :
+\[
+  a=2^k, b=2^l: \quad k,l \in \Z
+\]
+The inverse under multiplication is the element that returns a given element to the multiplicitive identity, in this case 1 or $2^0$ so for $b=2^l$ the inverse is simply $b^{-1}=2^{-l}$ since we are allowed rationals. Then:
+\begin{align*}
+  &ab^{-1}=2^k2^{-l}=2^{k-l}\\
+  &\forall k, l \in \Z \quad k-l \in \Z\\
+\end{align*}
+meaning that the resulting element is an element of H. Thus we have proven that H is a subgroup of $\Q^*$ since we have shown that for any element in the nonempty subset of $\Q^*$, H that for any two elements a and b $ab^{-1}\in H$
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigline
+\section* {Problem# 6}Let $n$ be any positive integer and let $n\Z = \{kn \, : \, k \in \Z\}$ be the set of all integer multiples of $n$. Show that $n\Z$ is a subgroup of $\Z$.
+\begin{proof}
+Let a,b be elements of $n\Z$ then \[
+  a=nk\quad b=nl
+\]
+We need to show that $ab^{-1}\in n\Z$. Note that for the integers our group operation is addition so we need to first identity the inverse of b with respect to addition as our operator. that is to say solve:
+\[
+  nl+b^{-1}=0
+\]
+Since all enteries of $n\Z$ are multiples of n we can really confine our analysis to the integer being multipied by n to see that the inverse of b is:
+\[
+  b^{-1}=-nl
+\]
+as $-nl+nl=0$
+we now show that the composition of a and b inverse is in $n\Z$ as follows:
+\[
+  nk-nl=n(k-l),\quad \forall k,l \in \Z, k-l\in \Z
+\]
+so we have shown that the composition of a selected element a and the inverse of a selected element b is an element of the subset $n\Z$ since the resulting term is an integer scaled by n. Thus we conclude that $n\Z$ is a subgroup of $\Z$
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigline
+\section* {Problem# 7}Prove that the following set of matrices
+  $$ \left\{ \left( \begin{array}{ccc} 1 & x & y \\ 0 & 1 & z  \\ 0 & 0 & 1 \end{array} \right) \, : \,  x, y, z \in \R \right\} $$
+  is a subgroup of $GL_3$.
+  \begin{proof}
+    GL3 is the group of invertible three by three matrices. We can leverage properties of the invertible matrix theorem here and investigate the determinant. We will need to this prior to the verification of whether or not this a subgroup because we will need an inverse for the subgroup proof. The determinant of a 3x3 matrix can be found as follows:
+    \[
+      \det\left(\begin{bmatrix}
+        a&b&c\\d&e&f\\g&h&i
+    \end{bmatrix}\right)=a\det\left(\begin{bmatrix}
+      e&f\\h&i
+    \end{bmatrix}\right)-b\det\left(\begin{bmatrix}
+      d&f\\g&i
+    \end{bmatrix}\right)+
+    c\det\left(\begin{bmatrix}
+      d&e\\g&h
+    \end{bmatrix}\right)
+    \]
+    in our context this gives:
+    \[
+      \det\left(\begin{bmatrix}
+      1 & x & y \\ 0 & 1 & z  \\ 0 & 0 & 1
+    \end{bmatrix}\right)=a\det\left(\begin{bmatrix}
+      1&z\\0&1
+    \end{bmatrix}\right)-x\det\left(\begin{bmatrix}
+      0&z\\0&1
+    \end{bmatrix}\right)+
+    y\det\left(\begin{bmatrix}
+      0&1\\0&0
+    \end{bmatrix}\right)
+    \]
+    \[
+    \det\left(\begin{bmatrix}
+    1 & x & y \\ 0 & 1 & z  \\ 0 & 0 & 1
+  \end{bmatrix}\right)=1-0+0
+    \]
+    so we have shown then that any matrix in this set is invertible. We now prove subgroup\\\\
+    let a and b be elements of our set such that.
+
+    \[
+      a=  \left( \begin{array}{ccc} 1 & a & b \\ 0 & 1 & c  \\ 0 & 0 & 1 \end{array} \right) \, : \,  a, b, c \in \R  \quad b=\left( \begin{array}{ccc} 1 & x & y \\ 0 & 1 & z  \\ 0 & 0 & 1 \end{array} \right) \, : \,  x, y, z \in \R
+    \] then to find b inverse we can derive an expression by computing the cofactor matrix and transposing since we have shown that determinant is simply 1.
+    instead of listing all determinants though I will only really list express the non zero ones:
+    \[
+    b^{-1}=
+      \begin{bmatrix}
+        \left|\begin{bmatrix}
+          1&z\\0&1
+        \end{bmatrix}\right|&0&0\\
+
+        -\left|\begin{bmatrix}
+          x&y\\0&1
+        \end{bmatrix}\right|&\left|\begin{bmatrix}
+          1&y\\0&1
+        \end{bmatrix}\right|&0\\
+
+        \left|\begin{bmatrix}
+          x&y\\1&z
+        \end{bmatrix}\right|&-\left|\begin{bmatrix}
+          1&y\\0&z
+        \end{bmatrix}\right|&\left|\begin{bmatrix}
+          1&0\\x&1
+        \end{bmatrix}\right|
+      \end{bmatrix}^T=
+      \begin{bmatrix}
+        1&0&0\\
+        -x&1&0\\
+        xz-y&-z&1
+      \end{bmatrix}^T=\begin{bmatrix}
+        1&-x&xz-y\\
+        0&1&-z\\
+        0&0&1
+      \end{bmatrix}
+    \]
+    \[
+      ab^{-1}=   \left[ \begin{array}{ccc} 1 & a & b \\ 0 & 1 & c  \\ 0 & 0 & 1 \end{array} \right]\begin{bmatrix}
+        1&-x&xz-y\\
+        0&1&-z\\
+        0&0&1
+      \end{bmatrix}=\begin{bmatrix}
+        1&a-x&-y-az+b+xz\\
+        0&1&c-z\\
+        0&0&1
+      \end{bmatrix}\in  \left\{ \left( \begin{array}{ccc} 1 & x & y \\ 0 & 1 & z  \\ 0 & 0 & 1 \end{array} \right) \, : \,  x, y, z \in \R \right\}
+    \]
+    so we have shown that for any two elements from the set that the outcome of composing the first element with the inverse of the second under the group operation is also an element of the set implying that this set forms a subgroup of $GL_3
+  \end{proof}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\end{document}

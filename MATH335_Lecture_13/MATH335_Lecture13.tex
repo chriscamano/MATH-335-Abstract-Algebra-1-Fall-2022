@@ -22,7 +22,7 @@
 \theoremstyle{definition}  % Heading is bold, text is roman
 \newtheorem{theorem}{Theorem}
 \newtheorem{corollary}{Corollary}
-\newtheorem{definition}{Definition}
+\newtheorem{defn}{Definition}
 \newtheorem{example}{Example}
 \newtheorem{proposition}{Proposition}
 
@@ -35,7 +35,7 @@
 \newcommand{\C}{\mathbb{C}}
 
 \newcommand{\lcm}{\mathrm{lcm}}
-
+\newcommand{\bigline}{\\\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\}
 
 
 \setlength{\parskip}{0cm}
@@ -49,4 +49,71 @@
 
 \begin{document}
 \maketitle
+\bigline
+\section{Sub Groups and their properties}
+\bigline
+\defn Subgroup\\
+Let G be a group. A subset H of G is called a subgroup if H itself is a group, when we restrict the group operation to H.\\ \bigline
+\textbf{Let G=$S_3$} the group operation of this group is function composition, thus to consider subgroups of this group we will first consider which subsets still are verifiable groups under function composition.
+Consider:
+\[
+\left\{
+\begin{bmatrix}
+  1&2&3\\
+  1&2&3
+\end{bmatrix},
+\begin{bmatrix}
+  1&2&3\\
+  2&3&1
+\end{bmatrix},
+\begin{bmatrix}
+  1&2&3\\
+  2&3&1
+\end{bmatrix}^2=\begin{bmatrix}
+  1&2&3\\
+  3&1&2
+\end{bmatrix}
+\right\}
+\]\\
+This Group is a subgroup since for all elements we are closed under function composition\\
+\bigline
+For all subgroups the identity element must be an element of the subgroup Since we still are using the same binary operator.\\\\
+The subgroup consisting of an element the identity and its inverse always forms a group since H will be closed under the group operation due to the limited selection criteria from the set. \\\\
+Every group has at minimum two subgroups. The first is the set of just the identity, the trivial subgroup. The next subgroup is the entire group itself. (typically ignored)\\\\
+If we have the case where an element's inverse is itself the subgroup consisting of that element and the identity forms a subgroup.
+\bigline
+Examples include cyclic group about 90 degree rotations in the complex unit circle in C and  the general linear group for 2x2 matrices. \\\\
+\defn $SL_2$ The special linear group is a subgroup of the general linear group defined as follows.:
+\[
+  SL_2=\{A\in GL_2: det(A)=1\}
+\]
+Since we have:
+\[
+  \det(AB)=\det A\det B
+\]
+The group is closed under matrix multiplication and is concequently a subgroup of $SL_2$ \\
+We also verify that taking the inverse of a matrix still places us in SL2 after the operation.This can be done by leveraging thefact that the coefficient over the inverse computtation begcomes 1 over 1 when det(A)=1 so we are still within $SL_2$
+\\
+\bigline
+\proposition Let G be a group and let h be a subset of G then h is a subgroup of G if and only if:
+\begin{enumerate}
+  \item $e\in H$
+  \item  $\forall\ h_1,h_2\in H \rightarrow h_1\circ h_2 \in H$
+  \item if $h\in H$ then $h^{-1}\in H$
+\end{enumerate}
+\\
+\bigline
+\textbf{Example} Consider $M_2$ the set of all matrices under the binary operator of matrix addition\\
+\begin{enumerate}
+  \item The operator is closed since dimensions are preserved.
+  \item The operation is associative by extension of the associativty of $\mathbb{R}$
+  \item Identity element is the zero matrix
+  \item the inverse element is -A\forall\ A \in M_2
+\end{enumerate}
+\proposition $GL_2\psubset M_2$ since $M_2$ is all 2x2 matrices. Is $GL_2$ a subgroup of $M_2$? Well, the zero matrix is not in $GL_2$ and concequently we do not have a subgroups
+\\
+\defn If H is a subgroup of G we write:
+\[
+  H\leq G
+\]
 \end{document}
