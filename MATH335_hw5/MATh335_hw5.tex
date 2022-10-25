@@ -416,7 +416,7 @@ so we have shown that the composition of a selected element a and the inverse of
     \[
       \det\left(\begin{bmatrix}
       1 & x & y \\ 0 & 1 & z  \\ 0 & 0 & 1
-    \end{bmatrix}\right)=a\det\left(\begin{bmatrix}
+    \end{bmatrix}\right)=\det\left(\begin{bmatrix}
       1&z\\0&1
     \end{bmatrix}\right)-x\det\left(\begin{bmatrix}
       0&z\\0&1
@@ -430,13 +430,13 @@ so we have shown that the composition of a selected element a and the inverse of
     1 & x & y \\ 0 & 1 & z  \\ 0 & 0 & 1
   \end{bmatrix}\right)=1-0+0
     \]
-    so we have shown then that any matrix in this set is invertible. We now prove subgroup\\\\
+    so we have shown then that any matrix in this set is invertible and at the very least our set is a subset of $GL_3$. We now prove subgroup:\\\\
     let a and b be elements of our set such that.
 
     \[
       a=  \left( \begin{array}{ccc} 1 & a & b \\ 0 & 1 & c  \\ 0 & 0 & 1 \end{array} \right) \, : \,  a, b, c \in \R  \quad b=\left( \begin{array}{ccc} 1 & x & y \\ 0 & 1 & z  \\ 0 & 0 & 1 \end{array} \right) \, : \,  x, y, z \in \R
     \] then to find b inverse we can derive an expression by computing the cofactor matrix and transposing since we have shown that determinant is simply 1.
-    instead of listing all determinants though I will only really list express the non zero ones:
+    Instead of listing all determinants in the cofactor matrix though I will only really express the non zero ones during the construction of $b^{-1}$ for brevity:
     \[
     b^{-1}=
       \begin{bmatrix}
