@@ -1,0 +1,258 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 310  Homework 7 }
+\date
+
+\usepackage[many]{tcolorbox}
+\tcbset{breakable}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{defn}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lcm}{\mathrm{lcm}}
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+\newcommand{\bigline}{\\\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}\\}
+
+\newcommand{\block}[2]{\begin{tcolorbox}[title={#1}]{#2}\end{tcolorbox}}
+\begin{document}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question 1}{
+Find all subgroups of $G=\langle a\rangle$ where $|a|=45$. Describe the containments between these subgroups.
+}
+\begin{proof}
+  $ $\newline
+   The unique subgroups of G are:
+   \begin{align*}
+     &<a^{45}>\\
+     &<a^3>\\
+     &<a^5>\\
+     &<a^{15}>\\
+     &<a^{9}>\\
+     &<e>\\
+   \end{align*}
+   With the containment realtion:
+   \[
+     <e>\subseteq <a^{9}> \subseteq <a^3> \subseteq <a^{45}>
+   \]
+   \[
+     <e>\subseteq <a^{15}> \subseteq <a^5> \subseteq <a^{45}>
+   \]
+   Note that :
+  \[
+    <a^{15}>\subseteq <a^3>
+  \]
+   As well.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question 2}{
+Find all generators of $\mathbb{Z}_{48}$.
+}
+\begin{proof}
+  $ $\newline
+  To start there are a total of:
+  \[
+    \phi(48)=\phi(2^4)\phi(3)=8(2)=16
+  \]
+  Geneators since this is how many times we obtain a denominator of one when solving for the order of each element.
+  The 16 relatively prime numbers to 48 are contained in the unit group of 48 therefore generators for $\Z_{48}$ are the elements of $U(48)$.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question 3}{
+Let $\  left(G_1, \circ\right)$ and $\left(G_2, \bullet\right)$ be two groups with the respective group operations $\circ$ and $\bullet$. Show that the cartesian product $G_1 \times G_2$ is a group with the following operation:
+$$
+\left(a_1, b_1\right) \diamond\left(a_2, b_2\right):=\left(a_1 \circ a_2, b_1 \bullet b_2\right) .
+$$
+}
+\begin{proof}
+  $ $\newline
+  To show that $G_1 \times G_2$ is a group we prove the following:
+  \begin{enumerate}
+    \item closure\\
+    To demonstrate closure under the operation $\left(a_1, b_1\right) \diamond\left(a_2, b_2\right):=\left(a_1 \circ a_2, b_1 \bullet b_2\right) .$ Since $\left(G_1, \circ\right)$ and $\left(G_2, \bullet\right)$ are closed under their respective operators we have the fact that for any ordered pair produced by the cartersian product with our new element $a_1 \circ a_2 \in G_1$ and $ b_1 \bullet b_2\right \in $
+    $G_2$ This implies that for all elements produced by our operator we obtain a new element of from the cartesian product of the two sets which is the desired meaning of closure in this context.
+    \item  \textbf{Assoicativity}
+    \begin{align*}
+      &\text{Let } (a_1,b_1),(a_2,b_2),(a_3,b_3)\in G_1\times G_2\\\\
+      &(a_1,b_1)((a_2,b_2)(a_3,b_3))=((a_1,b_1)(a_2,b_2))(a_3,b_3)\\\\
+      &(a_1,b_1)(a_2\circ a_3,b_2\bullet b_3)=(a_1\circ a_2,b_1\bullet b_2)(a_3,b_3)\\\\
+      &(a_1\circ a_2\circ a_3,b_1\bullet b_2\bullet b_3)=(a_1\circ a_2\circ a_3 ,b_1\bullet b_2\bullet b_3)\\\\
+    \end{align*}
+    \item \textbf{Identity}\\
+    Consider the composition of the following :
+    \[
+      \left(a_1, b_1\right) \diamond\left(a_1^{-1}, b_2^{-1}):
+    \]
+    By definition of the operator we obtain:
+    \[
+      \left(a_1 \circ a_1^{-1},a_1^{-1} \bullet b_1^{-1}\right)=(e,e)
+    \]
+    \item \textbf{Inverse}\\
+    Consider an element of $G_1 \times G_2$:
+    \[
+      (c,d)\in G_1 \times G_2
+    \]
+    By definition
+    \[
+      (c,d)=(a_1\circ a_2, b_1\bullet b_2)
+    \]
+    Since $a_1\circ a_2\in G_2$ so is c, and likewise since $b_1\bullet b_2 \in G_2$  so is d ,  Since $G_1$ and $G_2$ are groups there exists an inverse for each element in each group so we can construct an inverse:
+    \[
+      (c^{-1},d^{-1})\in G_1 \times G_2
+    \]
+    Proving the existence of an inverse:
+    \[
+        (c,d)\diamond (c^{-1},d^{-1})=(e,e)
+    \]
+  \end{enumerate}
+  Thus $G_1 \times G_2$ is a group under $\left(a_1, b_1\right) \diamond\left(a_2, b_2\right):=\left(a_1 \circ a_2, b_1 \bullet b_2\right)$
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question 4}{
+ List the elements in the group $\Z_2 \times \Z_3$. Show that this group is cyclic.
+}
+\begin{proof}
+  $ $\newline
+  The elements of $\Z_2 \times \Z_3$ are:
+  \[
+    \Z_2 \times \Z_3=\{(0,0),(0,1),(0,2),(1,0),(1,1),(1,2)\}
+  \]
+  Assuming that the group operator over the ordered pairs is element wise addidtion with respect to the original modular base:
+  the generator of this set is:
+  \[
+    <(1,1)>=\{(1,1),(0,2),(1,0),(0,1),(1,2),(0,0)
+  \]
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question 5}{
+List the elements in the group $\Z_2 \times \Z_2$. Show that this group is not cyclic. Argue that by now we know two different abelian groups with four elements
+}
+\begin{proof}
+  $ $\newline
+  The elements of this group are as follows:
+
+  \[
+    \Z_2 \times \Z_2=\{(0,0),(0,1),(1,0),(1,1)\}
+  \]
+  To demonstrate that this is not a cycic group we will show that each subgroup is not a generator:
+  \begin{align*}
+    &<(0,0)>=\{(0,0)\}\\
+    &<(0,1)>=\{(0,0),(1,1)\}\\
+    &<(1,1)>=\{(0,0),(0,1)\}\\
+    &<(1,0)>=\{(0,0),(1,0)\}\\
+  \end{align*}
+  This group itself is a non cyclic abelian group since the elements involved in the construction of the set come from abelian groups ( integers mod n ,+). This group has four elements so it is one of our order 4 abelian groups . \\
+
+  One way to find another order 4 abelian group is to consider the cartesian product of  an abelian group with two elements and another abelian  group with with two elements:
+  Consider = the unit group of 3 :
+  \[
+    U(3) \times U(3) =\{(1,1),(1,2),(2,1),(2,2))
+  \]
+  Which is an abelian group of order 4
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question 6}{
+Prove that neither $\Z_2 \times \Z$ nor $\Z \times \Z$ are cyclic groups.
+}\begin{enumerate}
+  \item \block{\textbf{Subproof 1: $\Z_2\times \Z$}}{
+  \begin{proof}
+    $ $\newline
+    \[
+      \Z_2=\{0,1\}
+    \]
+    \[
+    \Z_2 \times \Z=\{(0,k),(1,k):k\in \Z\}
+    \]
+    By the definition of composition of groups under a cartesian product given in problem 3. \\
+    Suppose that $\Z_2\times \Z$ is cyclic, then there exists (a,b)$\in \Z_2\times \Z$ such that :
+    \[
+      <(a,b)>=\Z_2\times \Z
+    \]
+    Consider the following:\\
+    Since (a,b)$\in \Z_2\times \Z$ It is either of the form (1,k) or (0,k) where k is an integer.
+    \\
+    \textbf{Case 1: (a,b) is of the form (1,k):}\\
+    If (a,b) is of the form (1,k) then the set generated by (a,b) does not contain (0,k) $\forall k \in \Z$ which is a contradiction \\
+    \textbf{Case 2: (a,b) is of the form (0,k):}\\
+    If (a,b) is of the form (0,k) then the set generated by (a,b) does not contain (1,k) $\forall k \in \Z$ which is a contradiction \\
+    Thus in either case we arrive to a contradiction meaning there does not exist a generator for$\Z_2\times \Z$ implying it is not cyclic.
+  \end{proof}}
+  \item \block{\textbf{Subproof 1: $\Z\times \Z$}}{
+  \newcommand{\ztz}{}
+  \begin{proof}
+    $ $\newline
+    To demonstrate that $\Z\times \Z$ is not a cyclic group we will proceed with a proof by cotradiction levergaining the fact that if a group is cyclic then there exists a generator: \\
+    Suppose that $\Z\times \Z$ is cyclic, then by definition there exists an ordered pair in $\Z\times \Z$ (a,b) such that :
+    \[
+      <(a,b)>=\Z \times \Z
+    \]
+    If $a=0$ then $(1,0)$ is not in this set, which leads to a contradiction since (a,b) is a supposedly a generator. So we have $a \neq 0$.\\
+    If $b=0$ then $(0,1)$ is not in this set, which leads to a contradiction since (a,b) is a supposedly a generator. So we have $b \neq 0$.\\
+    Consider the element $$(a,-b) \in \mathbb{Z} \times \mathbb{Z}$$There is an integer $k \in \mathbb{Z}$ with $(k a, k b)=(a,-b)$, and since $a, b \neq 0$ this gives $k=1$ and $k=-1$, which is a contradiction.\\\\
+    Together we have shown that element (0,1) cannot be generated with this construction
+  \end{proof}}
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question 7}{
+Let $G$ be a group and let $C_1 = \langle a \rangle$ and $C_2 = \langle b \rangle$ be two cyclic subgroups with orders $n$ and $m$, respectively.
+ Prove that if $\gcd(n,m) = 1$ then $C_1 \cap C_2 = \{e\}$.
+ }
+ \begin{proof}
+   $ $\newline
+  If $|<a>|=n$ this implies $a^n=e$ likewise   If $|<b>|=m$ this implies $a^m=e$. This knowledge together allows us to build representations of the elements of the group:
+  \[
+    C_1=\{e, a, a^1,a^2,\cdots, a^{n-1}\}
+  \]
+  \[
+    C_2=\{e, b, b^1,b^2,\cdots, b^{m-1}\}
+  \]
+  Suppose there exists another element in the intersection of $C_1$ and $C_2$, 
+   Since we have the property that:
+
+   \[
+     |a^k|=\frac{n}{\gcd(n,k)}
+   \]
+   This means that:
+   \[
+     |a^k|\gcd(n,k)=n\rightarrow |a^k||n
+   \]
+  So this means that since $x\in C_1$ that $$|x||n$$ as $x=a^l,l\in[1,n-1]$\\
+  Likewise since $x\in C_2$ that $$|x||m$$ as $x=b^i,i\in[1,m-1]$\\
+  But gcd(n,m)=1, meaning that the only time this could be true is when x=1=e
+ \end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

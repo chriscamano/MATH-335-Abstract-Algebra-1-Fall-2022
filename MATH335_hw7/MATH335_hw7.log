@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  25 OCT 2022 12:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  27 OCT 2022 09:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**MATH335_lecture_18.tex
-(./MATH335_lecture_18.tex
+**MATH335_hw7.tex
+(./MATH335_hw7.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-07-12>
 (c:/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -142,7 +142,7 @@ LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
 Runaway argument?
-./MATH335_lecture_18.tex:6: Paragraph ended before \date  was complete.
+./MATH335_hw7.tex:6: Paragraph ended before \date  was complete.
 <to be read again> 
                    \par 
 l.6 
@@ -573,9 +573,8 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 4
 
 (c:/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-(./MATH335_lecture_18.aux)
-\openout1 = `MATH335_lecture_18.aux'.
+) (./MATH335_hw7.aux)
+\openout1 = `MATH335_hw7.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
@@ -651,105 +650,89 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
 
-./MATH335_lecture_18.tex:55: Undefined control sequence.
-l.55 ...group and H be a subgroup of G. For $g\inG
-                                                  $ the left coset of H with...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./MATH335_lecture_18.tex:60: Undefined control sequence.
-l.60 ...group and H be a subgroup of G. For $g\inG
-                                                  $ the left coset of H with...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--87
-
- []
-
-
-./MATH335_lecture_18.tex:87: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.87 }\\\\
-          
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH335_lecture_18.tex:88: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.88 C
-      ompute all left cosets of H. \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--119
-
- []
+./MATH335_hw7.tex:98: Extra \right.
+<argument>  Let $\ left(G_1, \circ \right )
+                                           $ and $\left (G_2, \bullet \right...
+l.98 }
+      
+I'm ignoring a \right that had no matching \left.
 
 [1
 
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-(./MATH335_lecture_18.aux) ) 
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+./MATH335_hw7.tex:104: Missing delimiter (. inserted).
+<to be read again> 
+                   \in 
+l.104 ... \in G_1$ and $ b_1 \bullet b_2\right \in
+                                                   $
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+./MATH335_hw7.tex:104: Extra \right.
+<to be read again> 
+                   \in 
+l.104 ... \in G_1$ and $ b_1 \bullet b_2\right \in
+                                                   $
+I'm ignoring a \right that had no matching \left.
+
+./MATH335_hw7.tex:117: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.117     \]
+            
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 175--177
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+
+ []
+
+[4] [5] (./MATH335_hw7.aux) ) 
 Here is how much of TeX's memory you used:
- 17680 strings out of 478542
- 375239 string characters out of 5854402
- 680065 words of memory out of 5000000
- 35295 multiletter control sequences out of 15000+600000
- 435052 words of font info for 103 fonts, out of 8000000 for 9000
+ 17702 strings out of 478542
+ 375513 string characters out of 5854402
+ 686051 words of memory out of 5000000
+ 35312 multiletter control sequences out of 15000+600000
+ 437338 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,9n,97p,449b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r
-.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/font
-s/type1/urw/symbol/usyr.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/u
-tmb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texl
-ive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MATH335_lecture_18.pdf (2 pages, 71433 bytes).
+ 87i,10n,97p,442b,572s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8
+r.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/t
+ype1/urw/symbol/usyr.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb
+8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive
+/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on MATH335_hw7.pdf (5 pages, 93260 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

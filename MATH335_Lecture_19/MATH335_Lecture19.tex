@@ -1,0 +1,185 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 325 Lecture 19 }
+\date
+
+\usepackage[many]{tcolorbox}
+\tcbset{breakable}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{defn}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lcm}{\mathrm{lcm}}
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+\newcommand{\bigline}{\\\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}\\}
+
+\newcommand{\block}[2]{\begin{tcolorbox}[title={#1}]{#2}\end{tcolorbox}}
+\begin{document}
+\maketitle
+Opening Notes exam is on thursday November third, study guide coming friday evening or tomorrow. Short homework will be due tuesday, Submitted on i learn tuesday at 10am. \\
+In class eam will mostly be cyclic groups the take home will  be on cosets.
+\block{A return to the properties of Cosets}{
+  \item \proposition Let G be a group and H a subgroup of G. Then :
+\[
+  g_1H=g_2H \iff g_2\in H
+\]
+A coset generates its own representatives. \\
+
+
+
+
+}
+\begin{proof}
+  $\newline $
+  \textbf{ $ g_1H=g_2H \rightarrow g_2\in g_1H$ }\\
+  Since H is a subgroup when we compute:
+  $
+    g_2H
+  $
+  We are guarenteed to have at minimum $g_2\in g_2H$ since $g_2\circ e =g_2$
+  So $g_2\in g_2H$
+\end{proof}
+\begin{proof}
+  $\newline$
+  \textbf{$  g_1H=g_2H \leftarrow g_2\in H$ }\\
+  Given $g_2\in g_1H$ This means that $g2=g_1\bar{h}, \bar{h}\in H$ :
+  Consider the set $g_2H=\{g_2h,h\in H\}$\\
+  but we know that $g_2=g_1\bar{h}$ so :
+  \[
+    g_2H=\{g_2h,h\in H\}=\{g_1\bar{h}h:h\in H\}
+  \]
+  Note that since $\bar{h},h\in H$ that $\bar{h}h\in H$ and it follows that:
+  \[
+    g_1\bar{h}h\in H
+  \]
+  Thus:
+  \[
+    g_2H\subset g_1H
+  \]
+  We can also redefine $g_2$ as follows;
+  \[
+    g_2=g_1\bar{h}\rightarrow g_2\bar{h}^{-1}=g_1
+  \]
+  So:
+  \[
+    g_1H=\{g_1h:h\in H\}=\{g_2\bar{h}^{-1}h:h\in H}\subset g_2H
+  \]
+\end{proof}
+\block{Theorem}{
+ Let G be a group and H a subgroup of G then the distinct left cosets of H in G partition G.
+}
+Implications:
+\begin{enumerate}
+  \item The union of all left cosets of H is G
+  \item if $g_1H\neq g_2H$ then $g_1H \cap g_2H=\empty$
+\end{enumerate}
+\begin{proof}
+  $\newline$
+  \textbf{The union of all left cosets of H is G}\\
+  Given an element: $g\in G$ we show that g is some left coset of H g is in $gH$ since g composed with identity guarentees us the existence of a coset with g. \\
+\end{proof}
+\begin{proof}
+  $\newline$
+  \textbf{if $g_1H\neq g_2H$ then $g_1H \cap g_2H=\empty$}\\
+  We show that if the intersection of $g_1H\cap g_2H$ is not empty then $g_1H=g_2H$ this is the contrapositive of our original argument. Since the intersection is non empty there must exist an element in the intersection. Let g be an element in the intersection of the two cosets\\
+  Then:
+  \[
+    g=g_1h_1, h_1\in H \quad g=g_2h_2, h_2\in H
+  \]
+  Which implies:
+  \[
+    g_1h_1=g_2h_2
+  \]
+  \[
+    g_2=g_1h_1h_2^{-1},
+  \]
+  but: $h_1h_2^{-1}\in H$ So we have that $g_2\in g_1H$ and by the Previous proof we have: $g_2\in g_1H$
+\end{proof}
+If you have an infinite group there are infinite representatives for each coset. \\
+You can have a finite quantity of cosets for an infinite group and infinite subgroup\\
+Example G=$\Z$ $H=<n>$ The cosets are the equivilance classes \\
+The cosets are the elements of: $\Z_n$ \\
+The set of cosets does not always form a new group like in this example. \\
+\block{Proposition}{Let G be a group and H a subgroup of G, Then for any $g\in G$ there is a bijection between the subgroup H and the left coset gH. In particular, if H is a finite subgroup, then the number of elements in H and the number of elements in its left coset are the same, this is to say:
+\[
+  |H|=|gH|
+\]}
+\begin{proof}
+  $\newline$
+  Let $\phi:H\mapsto gH$ be : $\phi(h)=gh, h\in H, $.
+  We begin by proving surjectivity: Given an element of gH,: gh for some h. Then $\phi(h)=gh$ \\
+  Next is injectivity: Suppose $\phi(h_1)=\phi(h_2)$ Show $h_1=h_2$
+
+  \[
+    \phi(h_1)=gh_1\quad \phi(h_2)=gh_2
+  \]
+  Then by our assumption:
+  \[
+    gh_1=gh_2
+  \]
+  but we can left multiply by g inverse since we are in a group thus :
+  \[
+    h_1=h_2
+  \]
+\end{proof}
+\block{Major theorem:Lagrange's theorem}{
+Let G be a finite group.and H be a subgroup, The the number of distinct left cosets of H in G is equal to:
+\[
+  \frac{|G|}{|H|}
+\]
+in particular: $|H|||G|$
+}
+\begin{proof}
+  Distinct left cosets of H partition G. Every left Coset has as many elements as in H, This to say :
+  \[
+    \forall \text{ cosets } c_i, |c_i|=|H|
+  \]
+  Thus $|G|=|H|$ times the number of distinct left cosets of H\\
+\end{proof}
+\block{Colloary}{
+let G be a finite group and let a$\in G$ Then $|a||G|$ \\
+\[
+  |a|=|<a>|
+\]
+Then by Lagrange's theorem $|<a>|||G|$
+}
+\block{Colloray}{
+
+If $|G|=p$ then G must be a cyclic group
+}
+\begin{proof}
+  Pick any non identity element in G a . Consider $H=<a>$ by lagranges theorem $|H|||G|, |H||p$ so the order of H must be p. but the order of the group and subgroup is identical so $G=<a>$
+\end{proof}
+\end{document}

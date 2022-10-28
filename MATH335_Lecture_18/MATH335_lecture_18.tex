@@ -48,5 +48,73 @@
 \newcommand{\block}[2]{\begin{tcolorbox}[title={#1}]{#2}\end{tcolorbox}}
 \begin{document}
 \maketitle
-\block{Opening Notes}{}
+
+
+\textbf{Refresher of last lecture}\\
+\textbf{Left Coset:}\\
+ Let G be a group and H be a subgroup of G. For $g\inG$ the left coset of H with representative g is the set which is denoted as follows:
+\[
+  gH=\{gh:h\in H\}
+\]
+\textbf{Right Coset:}\\
+ Let G be a group and H be a subgroup of G. For $g\inG$ the left coset of H with representative g is the set which is denoted as follows:
+\[
+  Hg=\{hg:h\in H\}
+\]
+Cosets are a means of relating the size of the subgroup H to the size of the group G, more to follow:\\
+\block{Original Example}{
+Let: \[
+  G=S_3=\{e,\tau,\tau^2,\sigma_1,\sigma_2,\sigma_3\}
+\]
+\[
+  H=<\tau>=\{e,\tau,\tau^2\}
+\]
+\[
+  H=<\sigma_1>=\{e,\sigma_1\}
+\]
+\[
+\tau=
+  \begin{bmatrix}
+    1&2&3\\2&3&1
+  \end{bmatrix}
+\]
+\[
+\sigma_1=
+  \begin{bmatrix}
+    1&2&3\\2&1&3
+  \end{bmatrix}
+\]
+}\\\\
+Compute all left cosets of H. \\
+Compute all left cosets of K and all right cosets of K\\
+\\
+For the left cosets of H we obtain only two unique cosets \\
+The elements of a cosets generate the same coset if used as a representative. \\\\
+A coset is a set of its own representatives\\
+\block{Coset observations}{
+\begin{enumerate}
+  \item
+  $$
+  g_1H=g_2H \iff g_2 \in g_1H
+  $$
+  \item
+  \[
+    \frac{|G|}{|H|}=\text { number of Unique  left cosets of H }=\text { number of Unique right cosets of H }
+  \]
+  \item
+  \[
+    |H|||G|
+  \]
+  \item
+  In general  left coset is not equal to the right coset.
+  \item
+  order of each coset is the order of H.
+  \item The distinct cosets partition the group\\
+
+\end{enumerate}
+
+
+
+
+}
 \end{document}
