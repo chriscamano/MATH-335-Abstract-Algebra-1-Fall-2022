@@ -1,0 +1,182 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 335  Lecture 21 }
+\date
+
+\usepackage[many]{tcolorbox}
+\tcbset{breakable}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{defn}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lcm}{\mathrm{lcm}}
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+\newcommand{\bigline}{\\\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}\\}
+
+\newcommand{\block}[2]{\begin{tcolorbox}[title={#1}]{#2}\end{tcolorbox}}
+\begin{document}
+\maketitle
+New homework on cycle notation short"ish"
+\block{Transpositions}{
+1 cycles are called Transpositions. for example:
+\[
+  \sigma(a_1,a_2)
+\]
+simply swaps two elements. Any permutation is a product of Transpositions. This was proven last class although the notes are missing refer to the real notes posted on i learn for more details\\\\
+}
+\block{Theorem}{
+Any permutation in $S_n$ is a product of transpositions. This follows from the fact that any permutation can be writeen as a projduct of disjoint cycles.
+}
+\[
+  \sigma=(a_1a_2\cdots a_k)(b_1b_2\cdots b_l)\cdots(c_1c_2\cdots c_m)
+\]
+Cycle notation is generally cylical where the elements contained in the parentheses are moved to the right one index cycling over the parentheses at the boundaries. \\\\
+Each cycle can be decomposed into a product of 2 cycles, for example:
+\\
+\[
+  \sigma=(a_1a_2\cdots a_k)=(a_1a_k)(a_1a_{k-1})(a_1a_{k-2})\cdots (a_1a_3)(a_1a_2)
+\]
+Example:
+\[
+  \sigma=(1572)(364)(89), \quad \sigma \in S_9
+\]
+\[
+  \sigma=(12)(17)(15)(34)(36)(89)
+\]
+decomposed over each element pair from left to right. \\\\
+\block{Lemma}{
+If the identity element in $S_n$ (the identity permutation)can be written as a product of transpositions then the number of transpositions in that product has to be even.
+}
+\[
+  e=(ij)(ij)
+\]
+\[
+  e=(ij)(ij)(kl)(kl)
+\]
+it is not alwways so cue, but the number of transpositions will be even. \\
+
+\block{Theorem:Parity preserving property of cycles}{
+ If you take a permutation in$S_n$ and you express it as a product of transpositions, and then express it in a different way you will retain the parity
+}
+Analagously this can be understood as if an element of $S_n$ can be written as a product of transpositions any other representation will  have the same parity as the original expression . \\\\
+\begin{proof}
+  Let a permutation be expressed as follows:
+  \[
+    \sigma=\tau_1\tau_2\cdots \tau_k,\quad  \sigma \in S_n
+  \]
+  Where k is even and $\tau_i$ is a transpositions\\
+  Suppose that there exists an alternate epxression of sigma as follows:
+  \[
+  \sigma=\mu_1\mu_2\cdots \mu_l
+  \]
+  Where $\mu_i$ is a transpositions\\
+  We will now demonstrate that l must also be even. \\
+  For any transpositions the inverse is itself:
+  \[
+    (ij)^{-1}=(ij)
+  \]
+  since $e=(ij)(ij)$\\
+  all transpositions have order 2\\
+  \begin{align*}
+    &\tau_1\tau_2\cdots \tau_k=\mu_1\mu_2\cdots \mu_l\\
+    &\tau_1\tau_2\cdots \tau_k(\mu_l\mu_{l-1}\cdots \mu_1\mu_2)=(\mu_1\mu_2\cdots \mu_l)\mu_l\mu_{l-1}\cdots \mu_1=e\\
+  \end{align*}
+Then by our lemma k+l must be even and since we assume that k is even this implies that l must be even as well. \\
+
+\end{proof}
+\block{Definition: Even permutation}{
+A permutation in $s_n$ is called even if it is a  product of an even number of transpositions
+}
+All transpositions are odd\\
+A k cycle is even if k is odd and a k cycle is odd if k is even\\
+A k cycle can be expressed the product as k-1 transpositions\\
+\block{Definition: Set of all even permutations}{
+The set of all even permutations in $S_n$ is denoted by $A_n$.
+}
+Clearly we conclude that $A_n\subset S_n$ the question remains is $A_n$ a subgroup of $S_n$\\\\
+This subgroup is called the alternating group. \\
+Example:
+\[
+  S_3, A_3=\{e,\tau,\tau^2\}=\{e,(123),(132)\}=<\tau>
+\]
+The odd permutations do not form a subgroup since the identity is not present\\
+\begin{proof}
+  \textbf{Closure}\\
+  $\sigma,\tau\inA_n$ the product of two even transpositions is a product of an even number of transpostions thus we know that thier composition is an element of $A_n$\\
+  \textbf{Existence of inverses}\\
+  for sigma the inverse is simply the transpostions written in reverse order and since this is even we are still in $A_n$\\
+\end{proof}
+What happens for S_1
+\block{Proposition: $|A_n|=\frac{n!}{2}$}{
+Let $O_n$ be the set of odd permutations in $S_n$, $O_n\subset S_n$ We make a bijection between $O_n\mapsto A_n$ which would imply that their cardinalities are the same. \\
+\[
+  \psi:A_n\mapsto O_n, \psi(\tau)=\sigma\tau
+\]
+Where sigma is a single fixed transpostion\\
+This is a map since tau is already even and composing with another even transpostion send us to and odd permutation.
+This is a bijection
+\begin{proof}
+  \textbf{Injective}\\
+  \begin{align*}
+    &\psi(\tau_1)=\psi(tau_2)\\
+    &\sigma\tau_1=\sigma_tau_2\\
+    &\tau_1=\tau_2 \text{ by left mutliplication with sigma inverse (sigma)}
+  \end{align*}
+
+  \textbf{Surjective}\\
+  Let $\tau \in O_n$
+  we need to find an even permutation $\mu\in A_n$ such that $\psi(\mu)=\tau$\\
+  \begin{align*}
+    &\psi(\mu)=\tau\\
+    &\sigma\mu=\tau
+  \end{align*}
+  Let $\mu=\sigma\tau$ then :
+  \begin{align*}
+    &\psi(\mu)=\tau\\
+    &\sigma\sigma\tau=\tau\\
+    &\tau=\tau
+  \end{align*}
+So we have demonstrate dhtat the cardinality of :$A_n$ is the same as $O_n$
+\end{proof}
+}
+\block{Corollary}{
+\[
+  [S_n:A_n]=\frac{|S_n|}{|A_n|}=\frac{n!}{\frac{n!}{2}}=2
+\]
+The two distinct left cosets are $A_n$ itself and composition with a single fixed transposition which generates all of $O_n$
+}\\\\
+A subgroup of a group where the left cosets are equal to the rght subgroups are called normal subgroups. Groups that do not contain any normal subgroups are very important those groups are referred to as simple groups. Any group can be built from simple groups. They are analgous to atoms. When n is greater than 5, $A_n$ is a simple group. \\
+Kernals are normal subgroups. 
+\end{document}

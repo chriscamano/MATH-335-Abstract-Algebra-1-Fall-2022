@@ -1,0 +1,78 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+\usepackage{hyperref}
+\hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=blue,
+     citecolor = black,      
+     urlcolor=blue,
+     }
+%\usepackage[sc]{mathpazo}
+%\linespread{1.05}         % Palatino needs more leading (space between lines)
+%\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in 
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in 
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\lcm}{\mathrm{lcm}}
+
+
+
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain} 
+
+%\input{../header}
+
+
+\begin{document}
+
+%\homework{}{Homework VIII}
+
+\begin{enumerate}
+
+\item Let $G$ be a group of order $60$. What are the possible orders of the subgroups of $G$ ?
+\item Let $G$ be a group and let $a$ and $b$ be elements in $G$ with $|a| = n$ and $|b| = m$. If $gcd(m,n) = 1$, prove that $|G| \geq mn$. 
+\item Let $G$ be a group and $H$ a subgroup of $G$. We proved that $g_1H = g_2H$ if and only if $g_2 \in g_1H$. Using similar ideas in the
+  proof of this result prove that $g_1H=g_2H$ if and only if $g_1g_2^{-1} \in H$. 
+\item First notation: Suppose $G$ is group and $H$ is a subgroup of $G$. We call the number of distinct left cosets of $H$ in $G$ the index of $H$ in $G$,
+  and we denote this number by $[G \, : \, H]$. For instance, if $G$ is a finite group, the Lagrange's Theorem can be stated as $[G \, : \, H] = |G| / |H|$.
+  Now prove that $[G \, : \, H]$ is also the number of distinct right cosets of $H$ in $G$.
+ \item Show that if $[G \, : \, H] = 2$ then $gH = Hg$ for all $g \in G$. 
+\end{enumerate}
+
+
+
+\end{document}
+
+
+

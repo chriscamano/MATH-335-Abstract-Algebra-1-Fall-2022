@@ -1,0 +1,71 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsthm, amssymb,amsmath}
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+
+\newcommand{\ojo}[1]{{\sffamily\bfseries\boldmath[#1]}}
+
+\oddsidemargin 0pt
+\evensidemargin 0pt
+\marginparwidth 0pt
+\marginparsep 10pt
+\topmargin -10pt
+\headsep 10pt
+\textheight 8.4in
+\textwidth 7in
+
+%\input{header}
+
+
+\begin{document}
+
+%\exam{}{Take Home Exam II}
+
+\noindent
+This takehome exam is due 8:00 pm Friday, November 4. Your answers
+need to be typeset in \LaTeX \ and uploaded on iLearn.
+Please also read and sign the following and return it  with your answers.
+
+\vskip 3cm
+\noindent While I may have consulted with Serkan regarding this exam, the solutions presented here are my own work. I have
+not consulted any books other than the textbook and notes, nor  have I utilized the internet in any form in relation to the exam. I understand
+that to get full credit, I need to show all the steps necessary to arrive at the answer, and unless it is obvious, explain 
+my reasoning with complete sentences.
+
+
+\vskip 1cm 
+\noindent {\bf Name:}   \hspace{7cm}   {\bf Signature:}
+
+
+
+\vfill
+\eject
+
+\noindent {\bf 1.a)} Let $H = \left\{ \left( \begin{array}{cc} a & b \\ 0 & c \end{array} \right) \, : \, a,c \neq 0 \right\}$ be the subset of upper-triangular
+matrices in $GL_2$. Show that $H$ is a subgroup.\\
+{\bf 1.b)} Let $G$ be an abelian group. Prove that $\{ g \in G \, : \, |g| \mbox{ is finite} \}$ is a subgroup of $G$. Give an example where this set is not a subgroup
+in the case when $G$ is non-abelian. [Hint: Question 5 in Homework 6]\\
+
+\noindent {\bf 2.} Show that $U(2^n)$ is not a cyclic group for any $n \geq 3$. [Hint: find two distinct subgroups of order $2$; remember that in a cyclic
+group of order $m$ there is a {\it unique} subgroup of order $d$ for each divisor $d$ of $m$]\\
+
+
+\noindent {\bf 3.} Let $G = \langle a \rangle$ be a cyclic group of order $n$ and fix an integer $k$ such that $\gcd(k,n) = 1$. Consider the function
+$\psi \, : \, G \longrightarrow G$ where $\psi(g) = g^k$. Show that this function is a bijection (i.e. both surjective and injective).  \\
+
+
+\noindent {\bf 4.} Using Lagrange's Theorem list the possible orders of the elements in $S_4$. Prove that there is no element of order $6$ in $S_4$.
+Can you answer this {\it without}
+enumerating all elements in $S_4$ and computing their orders? \\
+  
+
+\noindent {\bf 5.a)} Let $H$ and $K$ be two subgroups of a group $G$ and $g$ belongs to $G$. Show that $g(H \cap K) = gH \cap gK$.
+{\bf 5.b)} Let $G$ be a group and $H$ and $K$ be subgroups of $G$. Suppose $[G \, : \,H] = m$ and $[G \, : \, K] = n$. Prove that $[G \, : \, H\cap K] \leq mn$.
+[Note that we are not assumining that $G$, $H$, or $K$ are finite groups].
+\end{document}
+
+
+
