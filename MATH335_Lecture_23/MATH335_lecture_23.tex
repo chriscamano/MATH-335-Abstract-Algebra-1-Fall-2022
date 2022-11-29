@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 335  Lecture 22 }
+\date
+
+\usepackage[many]{tcolorbox}
+\tcbset{breakable}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{defn}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lcm}{\mathrm{lcm}}
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+\newcommand{\bigline}{\\\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}\\}
+
+\newcommand{\block}[2]{\begin{tcolorbox}[title={#1}]{#2}\end{tcolorbox}}
+\begin{document}
+\maketitle
+\block{Normal Subgroups/Groups}{
+A normal group or subgroup is a group where the left cosets equals the right cosets for all reprsentatives in a general group. \\\\
+Let G be a group a subgroup of N of G is called normal if $gN=Ng, \forall g\in G$
+}
+Exapmple: $<(1,23)>=N$ generates a 3 element subgroup with 2 distinct cosets. N is a normal subgroup since eN=Ne, $\sigma N=N\sigma$
+\\
+Note that the subgroup need not be abelian to be normal
+\block{Proposition: If G is an abelian group thene very subgroup of G is a normal subgroup}{\begin{proof}
+  Let H be a subgroup of G, for $g\in G$ that $gH=Hg$ however since g is abelian this fact is quite obvious.
+  \[
+    gH=\{gh:h\in H\}=\{hg:h\in H\}=Hg
+  \]
+
+\end{proof}
+
+
+}
+\block{We will see that $A_n$ is a normal subgroup of $S_n$ but it is neither abelian nor cyclic}{}
+\block{Definition: Let H be a subgroup of group G, and let$g\in G$}{ Consider the set $$gHg^{-1}=\{ghg^{-1}:h\in H$$}
+Example\\
+Let G=$S_3#: H=<\sigma>=\{e,(1\2)$
+\[
+  g=(1\ 2\ 3)\quad gHg^{-1}=(1\ 2\ 3)H(1\ 3\ 2)^{-1}=\{(1\ 2\ 3)e, (1\ 2\ 3)(12)(1\ 3\ 2)\}=\{e,(2 \ 3)\}
+\]
+\block{Let N be a sugroup of a group G then the following are equivilant }{\begin{enumerate}
+  \item N is Normal
+  \item$ gNg^{-1}\subset N \quad \forall \ g\in G$
+  \item  $gNg^{-1}=N \quad \forall\ g \in G $
+\end{enumerate}
+\begin{proof}
+  we prove that (1) implies(2) implies(3):\\
+  \textbf{(1) implies (2)}:\\
+  Since N is a normal subgroup this implies that $gN=Ng$ for all elements g in G. \\
+  \begin{align*}
+    &gn\in gN, \rightarrow gn\in Ng\\
+    &\therefore gn=n^*g \text{ for }n^*\in N\\
+    &gng^{-1}=n^*\rightarrow gng^{-1}\in N
+  \end{align*}
+  \textbf{(2) implies (3)}:\\
+  We wish to show that $  gNg^{-1}\subset N\rightarrow gNg^{-1}=N\quad \forall\ g\in G $\\
+  We need to show the other side of the set inclusion thus we prove:
+  \[
+    N\subset gNg^{-1}
+  \]
+  let n$\in N$, consider $g^{-1}n(g^{-1})^{-1}=g^{-1}ng\in N $\\ by the previous proof, therefore we sho that $g^{-1}ng=n^*$ for $n^*\in N$ \\
+  \[
+    g^{-1}ng=n^*\rightarrow n=gn^*g^{-1}
+  \]
+  So we have shown that N is a contained in $gNg^{-1}$ and we conclude that they are equal
+
+  \textbf{(3) implies (1)}:\\
+      $gNg^{-1}=N\quad \forall\ g\in G \rightarrow gN=Ng$\\
+      We show this by a set inclusion proof as follows:
+      \\\textbf{gN$\subset$Ng}\\
+      $gn\in gN$\\
+      $gng^{-1}\in gNg^{-1}=N\rightarrow gng^{-1}=n^*, n^*\in N$\\ Right multiplication yeilds:
+      \[
+        gn=n^*g
+      \]\\
+      And we conclude $gN\subset Ng$
+      \textbf{Ng$\subset$gN}\\
+      This proof is symmetric
+\end{proof}}
+\block{Theorem: G is always a normal subgroup of itself. }{}
+\
+\end{document}

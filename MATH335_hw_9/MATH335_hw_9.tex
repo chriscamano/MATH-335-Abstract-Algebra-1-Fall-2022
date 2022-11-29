@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 335  Homework 9 }
+\date
+
+\usepackage[many]{tcolorbox}
+\tcbset{breakable}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{defn}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lcm}{\mathrm{lcm}}
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+\newcommand{\bigline}{\\\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}\\}
+
+\newcommand{\block}[2]{\begin{tcolorbox}[title={#1}]{#2}\end{tcolorbox}}
+\begin{document}
+\maketitle
+
+\block{Question #1}{
+Consider the following permutations in $S_{15}$:
+  $$ \sigma = \left( \begin{array}{ccccccccccccccc} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+                       13& 2 &15&14&10& 6 &12& 3 & 4 &   1 &   7 &   9 &   5 & 11 &   8 \end{array} \right) $$
+  $$      \tau = \left( \begin{array}{ccccccccccccccc} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+                          14& 9 &10& 2 &12 & 6 & 5 & 11 & 15 &   3 &   8 &   7 &   4 & 1 &   13 \end{array} \right). $$
+Express these permutations in their disjoint cycle representation. Then
+compute $\sigma^2$, $\sigma \tau$, $\tau \sigma$, $\tau^2\sigma$, and $\sigma^{-1} \tau$ using their cycle representation. Determine whether
+$\sigma$ and $\tau$ are even or odd permutations.
+}
+\begin{proof}
+\begin{enumerate}
+  \item Express sigma in cycle decomposition\\
+  $\sigma=(1\ 13 \5 \ 10)(3 \ 15 \ 8)(4 \ 14 \ 11 \7 \ 12 \9)$
+  \[
+    \sigma=(1 \ 10)(1 \ 5)(3 \ 8) ( 3 \ 15)(4 \ 9)( 4 \ 12)( 4 \ 7)( 4\ 11) ( 4 \ 14)
+  \]
+  There are 10 transpostions so sigma is even
+  \item Express tau in cycle decomposition\\
+  $\tau=(1 \ 14)(2\ 9 \ 15 \ 13 \ 4)(3 \ 10)(5 \ 12 \ 7)(8 \ 11)$
+  \[
+    \tau=( 1 \ 14)( 2 \ 4 )(2 \ 13)( 2 \ 15) ( 2 \ 9)(3 \ 10) ( 5 \ 7) ( 5 \ 12) ( 8 \ 11)
+  \]
+  There are 9 transpositions so tau is odd.
+  \item compute $\sigma^2$\\
+  \[
+    \left[(1\ 13 \ 5 \ 10)(3 \ 15 \ 8)(4 \ 14 \ 11 \ 7 \ 12 \ 9)\right]\left[(1\ 13 \ 5 \ 10)(3 \ 15 \ 8)(4 \ 14 \ 11 \ 7 \ 12 \ 9)\right]
+  \]
+  \[
+  (1 \ 5)(13 \ 10 )( 4 \ 11 \ 12)(7 \ 9 \ 14)( 3\  8 \ 15)
+  \]
+  \item compute $\sigma \tau$\\
+  \[
+  [(1\ 13 \ 5 \ 10)(3 \ 15 \ 8)(4 \ 14 \ 11 \ 7 \ 12 \ 9)][(1 \ 14)(2\ 9 \ 15 \ 13 \ 4)(3 \ 10)(5 \ 12 \ 7)(8 \ 11)]
+  \]
+  \[
+    (1 \ 11 \ 3)(2\ 4)( 5\ 9\ 8\ 7 \ 10 \ 15 )(13\ 14)
+  \]
+  \item compute $\tau^2\sigma$\\
+  \[
+  [(1 \ 14)(2\ 9 \ 15 \ 13 \ 4)(3 \ 10)(5 \ 12 \ 7)(8 \ 11)][(1 \ 14)(2\ 9 \ 15 \ 13 \ 4)(3 \ 10)(5 \ 12 \ 7)(8 \ 11)][(1\ 13 \ 5 \ 10)(3 \ 15 \ 8)(4 \ 14 \ 11 \ 7 \ 12 \ 9)]
+  \]
+  \[
+    (1 \ 2 \ 15\ 8\ 3\ 4 \ 14 \ 11 \ 12 \ 13\ 7\ 5 \ 10)
+  \]
+  \item compute $\tau \sigma$\\
+  \[
+[(1 \ 14)(2\ 9 \ 15 \ 13 \ 4)(3 \ 10)(5 \ 12 \ 7)(8 \ 11)][(1\ 13 \ 5 \ 10)(3 \ 15 \ 8)(4 \ 14 \ 11 \ 7 \ 12 \ 9)]
+  \]
+  \[
+    (1\ 4)(3 \ 13\ 12 \ 15 \ 11 \ 5)(1\ 4 \ 8 \ 10)
+  \]
+  \item compute $\sigma^{-1} \tau$\\
+  \[
+    [(4 \ 14 \ 11 \ 7 \ 12 \ 9)(3 \ 15 \ 8)(1\ 13 \ 5 \ 10)][(1 \ 14)(2\ 9 \ 15 \ 13 \ 4)(3 \ 10)(5 \ 12 \ 7)(8 \ 11)]
+  \]
+  \[
+  ( 5\ 9 \ 8 \ 7 \ 10 \ 15)(1 \ 11 \ 3)(2 \ 4)(13 \ 14)
+  \]
+\end{enumerate}
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question #2}{
+Show that if $\sigma$ is a $k$-cycle then $|\sigma| = k$.
+}
+\begin{proof}
+Lemma:
+\[
+  \sigma^i(a_j)=a_{i+j\mod k}
+\]
+\begin{proof}
+  \textbf{Base case: i =0}: \\
+    $$\sigma^0(a_i)=\sigma^{-1}\sigma a_{i}$$
+    \\
+    \textbf{Inductive Hypothesis:}\\
+    \[
+      \sigma^i(a_j)=a_{i+j\mod k}
+    \]
+    \textbf{Inductive Step }\\
+    We wish to demonstrate that :
+    \[
+      \sigma^{i+1}(a_j)=a_{i+1+j\mod k}
+    \]
+    We proceed as follows:
+    \begin{align*}
+      &\sigma^{i+1}(a_j)\\
+      &\sigma\sigma^i(a_j)\\
+      &\sigma(a_{i+j\mod k})\quad \text{By IH}\\
+      &a_{i+1+j\mod k}\quad \text{By defn of sigma}
+    \end{align*}
+    Thus we have proven our lemma through mathematical induction.
+\end{proof}
+Now for a given k cycle let us select an arbitrary element in the k cycle $a_g$ where g is the index of the element in the cycle. Then for $\sigma^k$ we have:
+\[
+  \sigma^k(a_g)=a_{k+g\mod k }=a_g
+\]
+Note that this is exactly the behavior of the identity operation and since we can select $a_g$ arbitrary by extention we deduce that th$\sigma^k$ is the identity, implying its order is in turn equal to k.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question #3}{
+Prove that the order of an element in $S_n$ equals the least common multiple of the lengths of the cycles in its cycle decomposition.
+}
+\begin{proof}
+Another way of thinking about this problem is rewriting it in the following way: \\\\
+The order of a permutation in $S_n$ is the lcm of the orders of the cycles in its decomposition. \\
+Let a$\in S_n$ then by the cycle decomposition theorem there is a way to decompose a into m disjoint cycles as follows:
+\[
+  a=(c_1 c_2 c_3\dots c_{k_1})(c_1 c_2 c_3\dots c_{k_2})\cdots(c_1 c_2 c_3\dots c_{m-1})(c_1 c_2 c_3\dots c_{m})
+\]
+Since by proof number two we know that the the order of a k cycle is equal to k then we know that the cycle decomposition generates a set of subcycles of orders:
+\[
+  {k_1,k_2,...,m-1,m}
+\]
+Now consider what it means to determine the order of a this is to say identify the positive integer number of times we must compose a with itself such that we return to the identity. Since a is a product of disjoint cycles if it is to equal the identity each cycle must be equal to the identity as well. Within the decomposition there is always a maximum cycle length. Due to the fact that the order of a cycle is its length to make this maximal cycle equal the identity we must exponentiate to its length, since other cycles in the decomposition could by smaller we must take the least common multiple so that these cycles become multiples of the identity as well, causing the entire decomposition to  ccollapse to the identity:
+\\
+Mathematically we can express this relationship by first examining what is means to determine order then by examining the divisibility of the subcycle's order:
+\\
+Suppose $a^i=e$ then by extention:
+\[
+  a^i=(c_1 c_2 c_3\dots c_{k_1})^i(c_1 c_2 c_3\dots c_{k_2})^i\cdots(c_1 c_2 c_3\dots c_{m-1})^i(c_1 c_2 c_3\dots c_{m})^i=e
+\]
+Since each cycle is disjoint.\\
+If each cycle raised to the ith power is equal to the identity this means that its order divides i, in other words its length divides i. And by extention a stronger statment which functions as our conclusion is that the least common multiple divides i giving us that the order of a is the lcm.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question #4}{
+Find all numbers $n$ such that $S_7$ contains an element of order $n$.
+}
+\begin{proof}
+  Firstly we know that there exists an element of order 2 by the fact that we can tranpose any two elements and return to identity by squaring, thus there exists an element of order 2 inf $S_7$\\\\
+  Like wise we can construct cycles that cycle any number of elements k where
+  \[
+    3\leq k \leq 7
+  \]
+  These are rather simple permutations. \\
+  Now consider the largest possible expression of disjoint cycles. We can write a permutation in $S_7$ as a 5 cycle and a 2 cycle and by the proof provided inq uestion 2 we know that the order of this element is the lcm of the two orders meaning that permutations of this construction are of order 10.
+  Likewise there exists an an analgous permutation when decomposing the seven elements into one 3 cycle and one 4 cycle, again by proof 3 this implies that the order of permutations constructed in this fashion would be lcm(3,4)=12
+  \\\\
+  Thus our conclusion is that within $S_7$ there are permutations of orders:
+  \[
+    n=12,10,1,2,3,4,5,6,7
+  \]
+  Where one is simply the identity permutation.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question #5}{
+Prove that $\sigma^2$ is an even permutation for every permutation $\sigma$.
+}
+\begin{proof}
+  $\newline$
+  \textbf{Case one: Sigma is even }\\
+  Let Sigma be an even permutation, then by definition we can express sigma as an even number of transpositions when decomposed. Since $\sigma^2$ is the product of two of these even decompositions we can express $\sigma^2$ as twice as many transpositions as just $\sigma$ however since $\sigma$ is even this returns an even value when doubled showing that $\sigma^2$ is even as well.\\\\
+  \textbf{Case two: Sigma is odd}\\
+  Suppose $\sigma$ is odd then by definition we can express $\sigma$ as an odd number of transpositions, let this value be k.$\sigma^2$ is then expressable as 2k transpostions, and for all values k 2k is even meaning that here $\sigma^2$ is even as well.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question #6}{
+{\it Challenge}: Show that every $\sigma \in A_n$ is a product of $3$-cycles.
+}
+\begin{proof}
+I am not sure if I am misinterpreting this problem but I belive that the proof goes as follows: \\\\
+All 3 cycles are even since they can be broken down into 2 tranpositions. Thus the product of any two three cycles is even since it is just 4 transpostions. By this reasoning for any even element in $A_n$ I can break it down into transpositions and then group the transpostions into 3 cycles dividing the total number of in half but since we know elements of $A_n$ are even this is guarenteed to be an integer . Thus I have detailed a scheme to turn any even element into the product of three cycles and concequently shown that for all elements in $A_n$ we can write it as a product of three cycles\\\\
+Remark the trickiest edge case here is simply an element that breaks down into only two transpostions. Here what we can do is consider that three cycle times the identity. Since the identity is always even by the theorem covered in class the identity can always be expressed as a product of three cycles and by extention the elemnt that breaks down into only two transpostions can actually be written as a product of three cycles using this convention .
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

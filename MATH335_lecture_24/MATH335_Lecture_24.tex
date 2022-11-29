@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 335  Lecture 24 }
+\date
+
+\usepackage[many]{tcolorbox}
+\tcbset{breakable}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{defn}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lcm}{\mathrm{lcm}}
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+\newcommand{\bigline}{\\\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}\\}
+
+\newcommand{\block}[2]{\begin{tcolorbox}[title={#1}]{#2}\end{tcolorbox}}
+\begin{document}
+\maketitle
+\block{Definition}{
+A subgroup H of a group G is called a normal subgroup if $gH=Hg\quad \forall\g\in G$\\\\
+Equivilantly H is a normal subgroup if and only if: $gHg^{-1}=H$ for all g in G.
+}
+\\
+\textbf{Example:}\\
+Every subgroup of an abelian group is normal. \\
+\textbf{Example}\\
+Let $G=S_3$ and $H=<(1 2)>=\{e,(1 2)\}$ We showed last time that H is not normal . In general we can prove this by showing tha $gHg^{-1}$ is not equal to H. \\
+All subgroups of index two must automatically be a normal subgroup. \\
+Homework hint: Given a group G consider the following set : $Z(G)=\{g\in G:ga=ag\forall a\in G\}$ Show that Z(G) is a normal subgroup of G. This is always true the abelian subgroup of a group is always a normal subgroup of G.\\
+\block{Motivation: Factor Groups}{
+Let G be a group and H is a subgroup of G. We consider all distinct left cosets of H in G.
+The set formed by all left cosets of G is denoted:
+$G/H$ We wish to make this set of all distinct left cosets of H in G into a group\\
+Intuitivley it feels like this can be accomplished by the following let a and b the representatives of two left cosets in H then::
+\[
+  (aH)(bH)=abH
+\]
+is our binary operation. but this is not well defined because selection of different representatives leads to different outcomes meaning that it fails as the binary operation. If H is a normal subgroup then this binary operation is sufficient
+}
+\block{Definition}{
+Let G be a gorup and N a norma subgroup of G\\
+If $aN=a^*N$ and $bN=b^*N$ then $abN=a^*b^*N$
+
+}
+\begin{proof}
+  Let $a^*=an$ for some n in N and $b^*=bn$ for some other n in N. Then we have
+  \[
+    a^*b^*N=an_1bn_2N=an_1bN=an_1Nb=aNb=abN
+  \]
+  We are able to convert a left coset to a right coset since we know that N is a norla sugroup giving us the ability to commuete right and left subgroups as we please throughout our proofs.
+\end{proof}
+\block{Theorem:}{
+If N is a normalsubgroup of the group G then the binary operation defined by $(aN)(bN)=(ab)N$ makes G/N the set of distinct left cosets
+}
+
+To prove this statement we must prove the three propeties that form a group  all three can be proven using the extended properties of the original group. This group is called a factor group or quotient group
+
+
+\\\\
+If G is finite and N is a normal subgroup then the factor group: $G/N$ is the index of G given N. \[
+  \left|G/N\right |=\frac{|G|}{|N|}
+\]
+
+\end{document}
