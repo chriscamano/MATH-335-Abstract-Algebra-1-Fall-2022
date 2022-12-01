@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+\usepackage{hyperref}
+\hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=blue,
+     citecolor = black,      
+     urlcolor=blue,
+     }
+%\usepackage[sc]{mathpazo}
+%\linespread{1.05}         % Palatino needs more leading (space between lines)
+%\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in 
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in 
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\lcm}{\mathrm{lcm}}
+
+
+
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain} 
+
+%\input{../header}
+
+
+\begin{document}
+
+%\homework{}{Homework X}
+
+\begin{enumerate}
+
+\item Let $r$ represent the rigid motion of a regular $n$-gon ($n \geq 3$) which rotates the figure counterclockwise by $2\pi/n$. Let $s$ represent the rigid motion which reflects
+  the figure along the axis of symmetry passing through the vertex labeled by $1$. 
+  \begin{itemize}
+  \item[a)] Carefully prove that $rs = sr^{-1}$ by computing the image of each vertex under the rigid motions
+    $rs$ and $sr^{-1}$. Conclude that $D_{n}$ is a non-abelian group.
+  \item[b)] Using induction prove that $r^ks = sr^{-k}$ for all positive integers $k$.
+   \item[c)] We saw that $D_{n} = \{ e, r, r^2, \ldots, r^{n-1}, s, sr, sr^2, \ldots, sr^{n-1} \}$. Show that $|sr^k| = 2$ for all $k=0,1, \ldots,~{n-1}$.  
+   \item[d)] Compute the index of the subgroup $\langle r \rangle$ in $D_{n}$. Do the same for $\langle s \rangle$. 
+  \end{itemize}
+\item Let $\Delta$ be a regular tetrahedron and let $G$ be the group of rigid motions of $\Delta$ [we are allowed to move $\Delta$ around in $\R^3$, but note
+  that we cannot do reflections anymore ]. Show that $|G| = 12$. [Hint: consider the argument with which we showed $|D_{n}| = 2n$]
+\item Determine all subgroups of $D_4$ and decide which ones are normal. Then find two subgroups $H_1$ and $H_2$ in $D_4$ such that $H_1 \subset H_2$,
+  $H_1$ is normal in $H_2$, $H_2$ is normal in $D_4$ but $H_1$ is not normal in $D_4$. This show that ``is a normal subgroup of'' is not a transitive relation. 
+\item Let $G$ be a group and $Z(G) = \{ g \in G \, : \, ga = ag \mbox{ for all } a \in G\}$. We have shown that $Z(G)$ is a subgroup of $G$. Now show that $Z(G)$
+  is a normal subgroup of $G$. 
+\item Let $H$ be a subgroup of $G$.
+  \begin{itemize}
+     \item[a)] For any $g \in G$, prove that $gHg^{-1}$ is a subgroup of $G$.
+     \item[b)] Now suppose that $H$ is the unique subgroup of order $k$ in $G$. Prove that $H$ is a normal subgroup. 
+   \end{itemize}
+\end{enumerate}
+
+
+
+\end{document}
+
+
+

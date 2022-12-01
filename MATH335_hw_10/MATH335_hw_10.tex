@@ -1,0 +1,264 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,graphicx, cite}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 335 Homework 10 }
+\date
+
+\usepackage[many]{tcolorbox}
+\tcbset{breakable}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+\hoffset=0in
+\voffset=-.3in
+\oddsidemargin=0in
+\evensidemargin=0in
+\topmargin=0in
+\textwidth=6.5in
+\textheight=8.8in
+\marginparwidth 0pt
+\marginparsep 10pt
+\headsep 10pt
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{defn}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lcm}{\mathrm{lcm}}
+\setlength{\parskip}{0cm}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\bibliographystyle{amsplain}
+
+%\input{../header}
+\newcommand{\bigline}{\\\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}\\}
+
+\newcommand{\block}[2]{\begin{tcolorbox}[title={#1}]{#2}\end{tcolorbox}}
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question #1}{
+ Let $r$ represent the rigid motion of a regular $n$-gon ($n \geq 3$) which rotates the figure counterclockwise by $2\pi/n$. \\\\Let $s$ represent the rigid motion which reflects
+  the figure along the axis of symmetry passing through the vertex labeled by $1$.
+  \begin{itemize}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item[a)] Carefully prove that $rs = sr^{-1}$ by computing the image of each vertex under the rigid motions
+    $rs$ and $sr^{-1}$. Conclude that $D_{n}$ is a non-abelian group.
+    \\
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item[b)] Using induction prove that $r^ks = sr^{-k}$ for all positive integers $k$.
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \item[c)] We saw that $D_{n} = \{ e, r, r^2, \ldots, r^{n-1}, s, sr, sr^2, \ldots, sr^{n-1} \}$. Show that $|sr^k| = 2$ for all $k=0,1, \ldots,~{n-1}$.
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \item[d)] Compute the index of the subgroup $\langle r \rangle$ in $D_{n}$. Do the same for $\langle s \rangle$.
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \end{itemize}
+  }
+\begin{itemize}
+  \item
+  \begin{proof}
+  $\newline$\\
+  To prove this proposition let us consider the effect of each transformations on an arbitrarily selected vertex of our n gon. For the transformation rs the vertex is first rotated counterclockwise one vertex position then reflected about the line of symmetry drawn at the point. \\\\
+  For the second transformation the selected vertex is first rotated clockwise one vertex position then reflected about the line of symmetry drawn at that vertex\\\\
+  Under the effect of each of these transformations a fixed starting point is mapped to the same final vertex. Thus under the effect of each transformation the image of a given vertex is identical meaning that the transformations are equivilant over the enire n gon. \\\\
+  In some sense one can think of these operations as doing the same transformation, just in a different order with the rotation direction switched. This is because:
+  \[
+    r^{-1}=r^{n-1}
+  \]
+
+  The group is non abelian since we cannot achieve the same result if we instead choose to rotate in the same direction but then apply the reflection in a different order.
+  This is to say that :
+  \[
+     sr\neq rs
+  \]
+  \end{proof}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item
+  \begin{proof}
+  $\newline$\\
+  \textbf{Base case: k=1}\\
+  \begin{align*}
+    &r^1s=sr^{-1}
+  \end{align*}
+  Which is true by (a)
+  \\
+  \textbf{Inductive Hypothesis: }\\
+  \[
+    r^ks=sr^{-k}\rightarrow r^ks(r^ks)=e
+  \]
+  \textbf{Inductive Step}:
+  \begin{align*}
+    &r^{k+1}s(r^{k+1}s)\\
+    &r^{k+1}(s(r^{k+1})s\\
+    &r^{k+1}r^{-k-1}ss\\
+    &e
+  \end{align*}
+  Thus we have proven the equivilancy by mathematical induction and concequently:
+\begin{align*}
+  &r^{k+1}sr^{k+1}s=e\\
+  &r^{k+1}s=(r^{k+1}s)^{-1}\\
+  &r^{k+1}s=sr^{-k-1}
+\end{align*}
+  \end{proof}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item
+  \begin{proof}
+    $\newline$\\
+    \textbf{Base case:k=0}\\
+    \begin{align*}
+      sr^0(sr^0)=s(s)=e
+    \end{align*}
+    \textbf{Inductive Hypothesis}:
+  \[
+    (sr^k)(sr^k)=e
+  \]
+  \textbf{Inductive Step:}\\
+  \begin{align*}
+    &(sr^{k+1})(sr^{k+1})\\
+    &s(r^{k+1}s)r^{k+1})\\
+    & s(sr^{-k-1})r^{k+1}\\
+    &r^{-k-1}r^{k+1}\\
+    &e
+  \end{align*}
+  Thus by mathematical induction we have proven the statement to be true.
+  \end{proof}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item
+  \begin{proof}
+      $\newline$\\
+    The index of the subgroup $<r>$ in $D_n$ can be computed using lagrange's theorem as follows:Let H=$<r>$
+    \[
+      [H:D_n]=\frac{|D_n|}{|H|}=\frac{2n}{n}=n
+    \]\\\\
+    The index of the subgroup $<s>$ in $D_n$ can be computed using lagrange's theorem as follows:Let H=$<s>$
+    \[
+      [H:D_n]=\frac{|D_n|}{|H|}=\frac{2n}{n}=n
+    \]
+  \end{proof}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question #2}{
+Let $\Delta$ be a regular tetrahedron and let $G$ be the group of rigid motions of $\Delta$ [we are allowed to move $\Delta$ around in $\R^3$, but note
+  that we cannot do reflections anymore ]. \\\\Show that $|G| = 12$. [Hint: consider the argument with which we showed $|D_{n}| = 2n$]
+  }
+  \begin{proof}
+    $\newline$\\
+    In a regular tetrahedron there are a total of 4 vertices. To prove that the order of G is 12 we begin by demonstrating there are 12 rigid motions to consider. The first vertex can be sent to any of the other three vertices if we move the tetrahedron accordingly. This implies that we can preform this action fixing any of the four vertices as our observational vertex. Due to the fact that each vertex can be mapped to 3 distinct other locations and there are 4 ways to do this this implies that there are a total of 12 rigid motions and by extention that $|G|=12$
+  \end{proof}
+  \textbf{Note to the grader please answer if possible:}\\
+  Does this work if the tetrahedron is not regular ? It should right? I feel like since we only care about the vertex placement in $\R^3$ the edge lengths are not relevant.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question #3}{
+ Determine all subgroups of $D_4$ and decide which ones are normal.\\\\ Then find two subgroups $H_1$ and $H_2$ in $D_4$ such that $H_1 \subset H_2$,
+  $H_1$ is normal in $H_2$, $H_2$ is normal in $D_4$ but $H_1$ is not normal in $D_4$. This show that ``is a normal subgroup of'' is not a transitive relation.
+  }
+  \begin{proof}
+    We begin with a complete description of $D_4$:
+    \[
+      D_4=\{e,r,r^2,r^3,s,rs,r^2s,r^3s\}
+    \]
+    The subgroups for $D_4$ are as follows:
+    \begin{align*}
+      &{e}\\
+      &<r>=\{e,r,r^2,r^3\}\\
+      &<r^2>=\{e,r^2\}\\
+      &<s>=\{e,s\}\\
+      &<sr>=\{e,sr\}\\
+      &<sr^2>=\{e,sr^2\}\\
+      &<sr^3>=\{e,sr^3\}\\
+      &<s,r^2>=\{e,r^2,s,sr^2\}\\
+      &<sr,r^2>=\{e,r^2,sr,sr^3\}\\
+    \end{align*}
+    The identity is always a normal subgroup, the next easy contendors are those with index 2. Note that since $|D_4|=8$ we need only to look for order 4 subgroups of which there exist two namley: $<s,r^2>,<sr,r^2>,<r>$. Now remains the question, which of the remaining cyclic groups are normal ? There are 5 order 2 subgroups however note that all of them rely on reflection except for $<r^2>$. During construction of left and right cosets reflection will produce different results depending on what the reflection permutation is being applied on. Thus in this specific context this reasoning allows us to narrow the search down to just checking if $<r^2>$ is normal. Here we are lucky since this subgroup consists of only two elements, we then consider the eight possible elements and confirm they are elements of $<r^2>$ \\
+    \begin{align*}
+      &r(r^2)(r)^{-1}=r(r^2)r^3=r^2\\
+      &r^2(r^2)(r^2)^{-1}=r^2(r^2)r^2=r^2\\
+      &r^3(r^2)(r^3)^{-1}=r^3(r^2)r^1=r^2\\
+      &s(r^2)(s)^{-1}=s(r^2)(s)=r^2\\
+      &rs(r^2)(rs)^{-1}=rs(r^2)sr^3=r^2\\
+      &r^2s(r^2)(r^2s)^{-1}=r^2s(r^2)sr^2=r^2\\
+      &r^3s(r^2)(r^3s)^{-1}=r^3s(r^2)sr=r^2\\
+    \end{align*}
+    So we have shown that $<r^2>$ is then normal. \\
+    In conclusion we have proven that the normal subgroups for $D_4$ are:
+    \[
+      <e>,<r><r^2>,<s,r^2>,<sr,r^2>
+    \]
+  \end{proof}
+  $\newline$\\
+  \textbf{Then find two subgroups $H_1$ and $H_2$ in $D_4$ such that $H_1 \subset H_2$,
+   $H_1$ is normal in $H_2$, $H_2$ is normal in $D_4$ but $H_1$ is not normal in $D_4$. This show that ``is a normal subgroup of'' is not a transitive relation.}
+  \begin{proof}
+    Consider the following:
+    \[
+      H_1=<s>\quad H_2=<s,r^2>
+    \]
+    $H_2$ is normal in $D_4$ and $H_1$ is normal in $H_2$ since its index is 2, however we proved above that $H_1$ is not normal in $D_4$ thus we have shown that the normal subgroup relation is not transitive.
+  \end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question #4}{
+ Let $G$ be a group and $Z(G) = \{ g \in G \, : \, ga = ag \mbox{ for all } a \in G\}$. We have shown that $Z(G)$ is a subgroup of $G$. \\\\Now show that $Z(G)$
+  is a normal subgroup of $G$.
+  }
+  \begin{proof}
+    I believe that this proof is quite straightfoward. In order to demonstratre that this asubgroup is normal we need only to show that for all $g\in G, n\in Z(G) that gng^{-1}\in Z(G)$
+    However since our elements commute with all elements of G we can simply do the following:
+    \begin{align*}
+      &gng^{-1}\\
+      &gg^{-1}n\\
+      &n
+    \end{align*}
+    which is an element of  Z(G) by construction. This logical extends without loss of generality to any selection of g and n and thus we show that Z(G) is a normal subgroup of G.
+  \end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\block{Question #5}{
+Let $H$ be a subgroup of $G$.
+  \begin{itemize}
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     \item[a)] For any $g \in G$, prove that $gHg^{-1}$ is a subgroup of $G$.
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     \item[b)] Now suppose that $H$ is the unique subgroup of order $k$ in $G$. Prove that $H$ is a normal subgroup.
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \end{itemize}
+   }
+   \begin{itemize}
+     \item
+     \begin{proof}
+       To prove that $gHg^{-1}<G$ we must show that firstly $gHg^{-1}$ is non empty and that for any $g,h\in gHg^{-1} that gh^{-1}\in gHg^{-1}$ by proposition 3.31 in the text. \\\\
+       We can quickly note that this set is nonempty since the identity element is present in $gHg^{-1}$ giving back identity.\\\\
+       Next We will arbitrarily select two elements of $Hg^{-1}$:
+       \[
+         x=gh_ig^{-1}\quad y=gh_jg^{-1}
+       \]
+       \begin{align*}
+         &xy^{-1}\\
+         &gh_ig^{-1}(gh_jg^{-1})^{-1}\\
+         &gh_ig^{-1}gh_j^{-1}g^{-1}\\
+         &gh_ih_j^{-1}g^{-1}\in gHg^{-1}
+       \end{align*}
+       Since $h_ih_j^{-1}\in H$ by closure of H's operator and the existence of inverses in the subgroup H.
+     \end{proof}
+     \item
+
+     \begin{proof}
+       Since H is the unique subgroup of order k in G this implies that if we attempted to form $gHg^{-1}, g\in G$ we would simply get back H because otherwise we would have a second subgroup of order k. This satisifes condition 3 of theorem 10.3 in the text which is that $\forall g\in G gHg^{-1}=H$ meaning H must be a normal subgroup.
+     \end{proof}
+   \end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
